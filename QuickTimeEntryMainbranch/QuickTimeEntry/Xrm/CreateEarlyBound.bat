@@ -1,0 +1,1 @@
+crmsvcutil.exe /url:https://a24quicktimeentry.dev.anywhere24.com/XRMServices/2011/Organization.svc /serviceContextName:XrmServiceContext /namespace:CCMA24Produktiv /out:entities.cs /d: /u:"a24xrmdomain\Administrator" /password:"@start2013"

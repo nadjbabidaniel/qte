@@ -1,0 +1,68 @@
+﻿<Window x:Class="QuickTimeEntry.SelectFavorite"
+        xmlns:dxg="http://schemas.devexpress.com/winfx/2008/xaml/grid"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:dx="http://schemas.devexpress.com/winfx/2008/xaml/core"
+		ResxExtension.DefaultResxName="QuickTimeEntry.SelectFavorite" Language="{UICulture}"
+        Title="" Height="500" Width="565" xmlns:dxe="http://schemas.devexpress.com/winfx/2008/xaml/editors" ResizeMode="NoResize" ShowInTaskbar="False" Topmost="True" WindowStartupLocation="CenterOwner" WindowStyle="ToolWindow">
+    <Grid dx:ThemeManager.ThemeName="Office2010Silver" Width="Auto" Height="Auto" Margin="5,5,5,5">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="100" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="35" />
+            </Grid.RowDefinitions>
+        </Grid>
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+                <RowDefinition Height="30" />
+            </Grid.RowDefinitions>
+            <dxg:GridControl Grid.Column="0" Grid.Row="0" Margin="5,5,5,5" Height="Auto" Width="Auto" Name="FavGrid" MouseDoubleClick="FavGrid_MouseDoubleClick">
+                <dxg:GridControl.View>
+                    <dxg:TableView x:Name="FavGridview" AutoWidth="True" NavigationStyle="Cell" ShowTotalSummary="True" />
+                </dxg:GridControl.View>
+                <dxg:GridControl.Columns>
+                    <dxg:GridColumn Name="gc_type" Header="{Resx gc_type}" FieldName="gctype" />
+                    <dxg:GridColumn Name="gc_desc" Header="{Resx gc_desc}" FieldName="gcdescription" />
+                </dxg:GridControl.Columns>
+            </dxg:GridControl>
+            <Grid Grid.Column="0" Grid.Row="1">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="105" />
+                    <ColumnDefinition Width="160" />
+                    <ColumnDefinition Width="115" />
+                </Grid.ColumnDefinitions>
+                <Label Name="FAVSearchInfo" Grid.Column="0" Padding="5,5,0,0" Content="{Resx FAVSearchInfo}" />
+                <Button Margin="5,0,5,5" Grid.Column="1" Height="23" Name="btnFAVDelete" Width="95" Click="btnFAVDelete_Click">
+                    <StackPanel Orientation="Horizontal">
+                        <Image Width="16" Name="btnFAVDeleteImage" Margin="0,0,5,0" Source="/QuickTimeEntry;component/Images/16x16neu/Löschen.png" />
+                        <TextBlock Text="{Resx btnFAVDelete}"></TextBlock>
+                    </StackPanel>
+                </Button>
+                <Button Margin="5,0,5,5" Grid.Column="2" Height="23" Name="btnFAVAccept" Width="150" Click="btnFAVAccept_Click">
+                    <StackPanel Orientation="Horizontal">
+                        <Image Width="16" Name="btnFAVAcceptImage" Margin="0,0,5,0" Source="/QuickTimeEntry;component/Images/16x16neu/Speichern.png" />
+                        <TextBlock Text="{Resx btnFAVAccept}"></TextBlock>
+                    </StackPanel>
+                </Button>
+                <Button Margin="5,0,5,5" Grid.Column="3" Height="23" Name="btnFAVClose" Width="105" Click="btnFAVClose_Click">
+                    <StackPanel Orientation="Horizontal">
+                        <Image Width="16" Name="btnFAVCloseImage" Margin="0,0,5,0" Source="/QuickTimeEntry;component/Images/16x16neu/Abbrechen.png" />
+                        <TextBlock Text="{Resx btnFAVClose}"></TextBlock>
+                    </StackPanel>
+                </Button>
+            </Grid>
+        </Grid>
+    </Grid>
+
+</Window>

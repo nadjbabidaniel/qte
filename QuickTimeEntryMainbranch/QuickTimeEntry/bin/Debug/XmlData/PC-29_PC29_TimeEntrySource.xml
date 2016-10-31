@@ -1,0 +1,41 @@
+<?xml version="1.0" standalone="yes"?>
+<TimeEntries>
+  <item>
+    <id>0cb9579e-1712-448a-9dd4-7e60a6124a64</id>
+    <tekz>OPP</tekz>
+    <tekz2 />
+    <datum>10/5/2016</datum>
+    <beginn>10:46</beginn>
+    <ende>11:19</ende>
+    <dauer>0.00</dauer>
+    <zusatzzeit>00:33</zusatzzeit>
+    <gesamtdauer>0.75</gesamtdauer>
+    <taetigkeit>en 1</taetigkeit>
+    <taetigkeiturl />
+    <synced>no</synced>
+    <mscrmentityid />
+    <timemeasurements />
+    <beschreibung />
+    <anmerkung />
+    <mscrmstatus>Erfasst</mscrmstatus>
+    <mscrmstatusid />
+    <fahrtkosten>False</fahrtkosten>
+    <mscrmbezug>Test VC</mscrmbezug>
+    <mscrmbezugid>3c5f787d-4617-e611-80cb-00155d10671e</mscrmbezugid>
+    <mscrmbezug2 />
+    <mscrmbezugid2 />
+    <mscrmuser>Com Data</mscrmuser>
+    <mscrmuserid>4527c255-b521-e611-80cb-00155d10671e</mscrmuserid>
+    <mscrmbillingtype>Firmenintern</mscrmbillingtype>
+    <mscrmbillingtypeid>602370006</mscrmbillingtypeid>
+    <mscrmmodifiedon />
+    <lasterror />
+    <mscrmlinkurl />
+    <mscrmlinktext />
+    <mscrmlinkurl2 />
+    <mscrmlinktext2 />
+    <syncfrommscrm>false</syncfrommscrm>
+    <kw>40</kw>
+    <marked>false</marked>
+  </item>
+</TimeEntries>

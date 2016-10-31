@@ -1,0 +1,1165 @@
+﻿<Window ResxExtension.DefaultResxName="QuickTimeEntry.QuickTimeEntry" Language="{UICulture}" 
+        xmlns:dxr="http://schemas.devexpress.com/winfx/2008/xaml/ribbon"  xmlns:dxg="http://schemas.devexpress.com/winfx/2008/xaml/grid"  x:Class="QuickTimeEntry.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:dx="http://schemas.devexpress.com/winfx/2008/xaml/core"
+        xmlns:dxgt="http://schemas.devexpress.com/winfx/2008/xaml/grid/themekeys"
+        xmlns:local="clr-namespace:QuickTimeEntry"        
+        Title="" Height="569.5" Width="1386" xmlns:dxlc="http://schemas.devexpress.com/winfx/2008/xaml/layoutcontrol" xmlns:dxb="http://schemas.devexpress.com/winfx/2008/xaml/bars" xmlns:dxe="http://schemas.devexpress.com/winfx/2008/xaml/editors" Icon="/QuickTimeEntry;component/QTE.ico" Closing="Window_Closing">
+
+    <Window.Resources>
+        <local:GroupColumnSummaryForegroundConverter x:Key="GroupColumnSummaryForegroundConverter"/>
+    </Window.Resources>
+
+    <DockPanel Name="MainDockPanel" dx:ThemeManager.ThemeName="Office2010Silver" Background="White" Width="Auto" Height="Auto">
+        <ContentControl Height="Auto" Name="MainFormContent" Width="Auto" DockPanel.Dock="Bottom">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition />
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="30" />
+                </Grid.RowDefinitions>
+
+                <!-- Toolbar: begin -->
+                <dxb:BarManager Name="barManager1" Grid.Row="0" Grid.Column="0" >
+                    <DockPanel Name="dockPanel1">
+
+                        <dxr:RibbonControl RibbonHeaderVisibility="Collapsed" ShowApplicationButton="False" ToolbarShowMode="Hide" DockPanel.Dock="Top">
+                            <dxr:RibbonDefaultPageCategory>
+                                <dxr:RibbonPage Caption="QuickTimeEntry">
+                                    <dxr:RibbonPageGroup Caption="{Resx RibbonPage1}" ShowCaptionButton="False">
+                                        <dxb:BarItemLink BarItemName="bGoOnline" RibbonStyle="Large" />
+                                        <dxb:BarItemLink BarItemName="bGoOffline" RibbonStyle="Large" />
+                                    </dxr:RibbonPageGroup>
+                                    <dxr:RibbonPageGroup Caption="{Resx RibbonPage2}" ShowCaptionButton="False">
+                                        <dxb:BarItemLink BarItemName="bNew" RibbonStyle="Large" />
+                                        <dxb:BarItemLink BarItemName="bEdit" RibbonStyle="Large" />
+                                        <dxb:BarItemLink BarItemName="bDelete" RibbonStyle="Large" />
+                                        <dxb:BarItemLink BarItemName="bCopy" RibbonStyle="Large" />
+                                    </dxr:RibbonPageGroup>
+                                    <dxr:RibbonPageGroup Caption="{Resx RibbonPage3}" ShowCaptionButton="False">
+                                        <dxb:BarItemLink BarItemName="bExpandAll" RibbonStyle="Large" />
+                                        <dxb:BarItemLink BarItemName="bExpandNone" RibbonStyle="Large" />
+                                    </dxr:RibbonPageGroup>
+                                    <dxr:RibbonPageGroup Caption="{Resx RibbonPage4}">
+                                        <dxb:BarItemLink BarItemName="bSyncMSCRMActMonth" RibbonStyle="Large" />
+                                        <dxb:BarItemLink BarItemName="bSyncMSCRMPreMonth" RibbonStyle="Large" />
+                                        <dxb:BarItemLink BarItemName="bSyncMSCRMEntityRefresh" RibbonStyle="Large" />
+                                    </dxr:RibbonPageGroup>
+                                    <dxr:RibbonPageGroup IsVisible="False" Caption="{Resx RibbonPage5}" IsCaptionButtonEnabled="False">
+                                        <dxb:BarItemLink BarItemName="bDeleteGridView" RibbonStyle="SmallWithText" />
+                                        <dxb:BarItemLink BarItemName="bSaveGridView" RibbonStyle="SmallWithText" />
+                                        <dxb:BarItemLink BarItemName="bDefaultGridView" RibbonStyle="SmallWithText" />
+                                    </dxr:RibbonPageGroup>
+                                    <dxr:RibbonPageGroup Caption="" ShowCaptionButton="False">
+                                        <dxb:BarItemLink BarItemName="bShowFileLog" RibbonStyle="Large"  />
+                                        <dxb:BarItemLink BarItemName="bHelp" RibbonStyle="Large"  />
+                                    </dxr:RibbonPageGroup>
+                                    <dxr:RibbonPageGroup Caption="" ShowCaptionButton="False">
+                                        <dxb:BarItemLink BarItemName="bManageConnections" RibbonStyle="Large"  />
+                                    </dxr:RibbonPageGroup>
+                                    <dxr:RibbonPageGroup Caption="" ShowCaptionButton="False">
+                                        <dxb:BarItemLink BarItemName="bManageLanguage" RibbonStyle="Large"  />
+                                    </dxr:RibbonPageGroup>
+                                </dxr:RibbonPage>
+                            </dxr:RibbonDefaultPageCategory>
+                            <dxr:RibbonControl.ToolbarItemLinks>
+                                <dxb:BarItemLink BarItemName="bDeleteGridView"/>
+                                <dxb:BarItemLink BarItemName="bSaveGridView"/>
+                                <dxb:BarItemLink BarItemName="bCopy"/>
+                            </dxr:RibbonControl.ToolbarItemLinks>
+                        </dxr:RibbonControl>
+                    </DockPanel>
+
+                    <dxb:BarManager.Items>
+                        <dxb:BarButtonItem Name="bNew" Content="{Resx bNew.Content}" Glyph="/QuickTimeEntry;component/Images/16x16/history_add.png" LargeGlyph="/QuickTimeEntry;component/Images/32x32/history_add.png" KeyGesture="Ctrl+N" Hint="{Resx bNew.Hint}" ItemClick="OnNewItemClick" Description="{Resx bNew.Description}" />
+                        <dxb:BarButtonItem Name="bEdit" Content="{Resx bEdit.Content}" Glyph="/QuickTimeEntry;component/Images/16x16/history_edit.png" LargeGlyph="/QuickTimeEntry;component/Images/32x32/history_edit.png" KeyGesture="Ctrl+E" Hint="{Resx bEdit.Hint}" ItemClick="OnEditItemClick" Description="{Resx bEdit.Description}" />
+                        <dxb:BarButtonItem Name="bCopy" Content="{Resx bCopy.Content}" Glyph="/QuickTimeEntry;component/Images/16x16/clipboard_add_16x16.png" LargeGlyph="/QuickTimeEntry;component/Images/32x32/clipboard_add_32x32.png" KeyGesture="Ctrl+C" Hint="{Resx bCopy.Hint}" ItemClick="OnCopyItemClick" Description="{Resx bCopy.Description}" />
+                        <dxb:BarButtonItem Name="bDelete" Content="{Resx bDelete.Content}" Glyph="/QuickTimeEntry;component/Images/16x16/history_delete.png" LargeGlyph="/QuickTimeEntry;component/Images/32x32/history_delete.png" KeyGesture="Ctrl+D" Hint="{Resx bDelete.Hint}" ItemClick="OnDeleteItemClick" Description="{Resx bDelete.Description}" />
+                        <dxb:BarButtonItem Name="bSyncMSCRMActMonth" Content="{Resx bSyncMSCRMActMonth.Content}" Glyph="/QuickTimeEntry;component/Images/16x16/calendar_preferences.png" LargeGlyph="/QuickTimeEntry;component/Images/32x32/calendar_preferences.png" KeyGesture="Ctrl+A" Hint="{Resx bSyncMSCRMActMonth.Hint}" ItemClick="OnSyncMSCRMItemClick" Description="{Resx bSyncMSCRMActMonth.Description}" />
+                        <dxb:BarButtonItem Name="bSyncMSCRMPreMonth" Content="{Resx bSyncMSCRMPreMonth.Content}" Glyph="/QuickTimeEntry;component/Images/16x16/calendar_down.png" LargeGlyph="/QuickTimeEntry;component/Images/32x32/calendar_down.png" KeyGesture="Ctrl+P" Hint="{Resx bSyncMSCRMPreMonth.Hint}" ItemClick="OnSyncMSCRMPreMonthItemClick" Description="{Resx bSyncMSCRMPreMonth.Description}" />
+                        <dxb:BarButtonItem Name="bSyncMSCRMEntityRefresh" Content="{Resx bSyncMSCRMEntityRefresh.Content}" Glyph="/QuickTimeEntry;component/Images/16x16/data_replace.png" LargeGlyph="/QuickTimeEntry;component/Images/32x32/data_replace.png" KeyGesture="Ctrl+R" Hint="{Resx bSyncMSCRMEntityRefresh.Hint}" ItemClick="OnSyncMSCRMRefreshItemClick" Description="{Resx bSyncMSCRMEntityRefresh.Description}" />
+                        <dxb:BarButtonItem Name="bGoOnline" Content="{Resx bGoOnline.Content}" Glyph="/QuickTimeEntry;component/Images/16x16/data_green.png" LargeGlyph="/QuickTimeEntry;component/Images/32x32/data_green.png" KeyGesture="Ctrl+O" Hint="{Resx bGoOnline.Hint}" ItemClick="OnGoOnlineItemClick" Description="{Resx bGoOnline.Description}" />
+                        <dxb:BarButtonItem Name="bGoOffline" Content="{Resx bGoOffline.Content}" Glyph="/QuickTimeEntry;component/Images/16x16/data_red.png" LargeGlyph="/QuickTimeEntry;component/Images/32x32/data_red.png" KeyGesture="Ctrl+G" Hint="{Resx bGoOffline.Hint}" ItemClick="OnGoOfflineItemClick" Description="{Resx bGoOffline.Description}" />
+                        <dxb:BarButtonItem Name="bExpandAll" Content="{Resx bExpandAll.Content}" Glyph="/QuickTimeEntry;component/Images/16x16/branch_add.png" LargeGlyph="/QuickTimeEntry;component/Images/32x32/branch_add.png" KeyGesture="Ctrl+X" Hint="{Resx bExpandAll.Hint}" ItemClick="OnExpandAllItemClick" Description="{Resx bExpandAll.Description}" />
+                        <dxb:BarButtonItem Name="bExpandNone" Content="{Resx bExpandNone.Content}" Glyph="/QuickTimeEntry;component/Images/16x16/branch_delete.png" LargeGlyph="/QuickTimeEntry;component/Images/32x32/branch_delete.png" KeyGesture="Ctrl+R" Hint="{Resx bExpandNone.Hint}" ItemClick="OnExpandNoneItemClick" Description="{Resx bExpandNone.Description}" />
+                        <dxb:BarButtonItem Name="bHelp" Content="{Resx bHelp.Content}" Glyph="/QuickTimeEntry;component/Images/16x16/help.png" LargeGlyph="/QuickTimeEntry;component/Images/32x32/help.png" KeyGesture="Ctrl+H" Hint="{Resx bHelp.Hint}" ItemClick="OnHelpToolbarItemClick" Description="{Resx bHelp.Description}" />
+                        <dxb:BarButtonItem Name="bShowFileLog" Content="{Resx bShowFileLog.Content}" Glyph="/QuickTimeEntry;component/Images/16x16/clipboard.png" LargeGlyph="/QuickTimeEntry;component/Images/32x32/clipboard.png" KeyGesture="Ctrl+L" Hint="{Resx bShowFileLog.Hint}" ItemClick="OnFileLogOfTheDayItemClick" Description="{Resx bShowFileLog.Description}" />
+                        <dxb:BarButtonItem Name="bManageConnections" Content="{Resx bManageConnections.Content}" Glyph="/QuickTimeEntry;component/Images/16x16/server_network.png" LargeGlyph="/QuickTimeEntry;component/Images/32x32/server_network.png" KeyGesture="Ctrl+M" Hint="{Resx bManageConnections.Hint}" ItemClick="OnManageConnectionsItemClick" Description="{Resx bManageConnections.Description}" />
+                        <dxb:BarButtonItem Name="bSaveGridView" Content="{Resx bSaveGridView.Content}" Glyph="/QuickTimeEntry;component/Images/16x16/disk_blue.png" KeyGesture="" Hint="{Resx bSaveGridView.Hint}" Description="{Resx bSaveGridView.Description}" />
+                        <dxb:BarButtonItem Name="bDeleteGridView" Content="{Resx bDeleteGridView.Content}" Glyph="/QuickTimeEntry;component/Images/16x16/delete.png" KeyGesture="" Hint="{Resx bDeleteGridView.Hint}" Description="{Resx bDeleteGridView.Description}" />
+                        <dxb:BarButtonItem Name="bDefaultGridView" Content="{Resx bDefaultGridView.Content}" Glyph="/QuickTimeEntry;component/Images/16x16/delete.png" KeyGesture="" Hint="{Resx bDefaultGridView.Hint}" Description="{Resx bDefaultGridView.Description}" />
+                        <dxb:BarButtonItem Name="bManageLanguage" Content="{Resx bManageLanguage.Content}" Glyph="/QuickTimeEntry;component/Images/16x16/server_network.png" LargeGlyph="/QuickTimeEntry;component/Images/32x32/server_network.png" KeyGesture="Ctrl+M" Hint="{Resx bManageLanguage.Hint}" ItemClick="OnLanguageItemClick" Description="{Resx bManageLanguage.Description}" />
+
+
+                    </dxb:BarManager.Items>
+                </dxb:BarManager>
+                <!-- Toolbar: end -->
+
+                <!-- Statusbar: begin -->
+                <dxb:BarManager Grid.Row="3" Grid.ColumnSpan="2" CreateStandardLayout="True" AllowCustomization="False" AllowHotCustomization="False" AllowQuickCustomization="False" Name="barManager2" Height="25">
+                    <dxb:BarManager.Items>
+
+                        <dxb:BarStaticItem x:Name="staticItemInfo" Content="" AutoSizeMode="Fill" />
+                        <dxb:BarStaticItem x:Name="staticItemLine" Content="" />
+                    </dxb:BarManager.Items>
+                    <dxb:BarManager.Bars>
+                        <dxb:Bar IsStatusBar="True" Caption="Status Bar" UseWholeRow="True">
+                            <dxb:Bar.DockInfo>
+                                <dxb:BarDockInfo ContainerType="Bottom" />
+                            </dxb:Bar.DockInfo>
+                            <dxb:Bar.ItemLinks>
+                                <dxb:BarStaticItemLink BarItemName="staticItemLine" />
+                                <dxb:BarStaticItemLink BarItemName="staticItemInfo" />
+                            </dxb:Bar.ItemLinks>
+                        </dxb:Bar>
+                    </dxb:BarManager.Bars>
+                </dxb:BarManager>
+                <!-- Statusbar: end -->
+
+                <DockPanel Name="DockPanelx" Grid.Column="0" Grid.Row="1" dx:ThemeManager.ThemeName="Office2010Silver" Background="AliceBlue" Width="Auto" Height="Auto">
+
+                    <dxg:GridControl CustomColumnSort="TimeEntryGrid_CustomColumnSort" CustomSummary="TimeEntryGrid_CustomSummary" Name="TimeEntryGrid" Loaded="TimeEntryGrid_Loaded" DockPanel.Dock="Left, Right, Top" MouseRightButtonDown="TimeEntryGrid_MouseRightButtonDown" MouseDoubleClick="TimeEntryGrid_MouseDoubleClick">
+
+                        <dxg:GridControl.View>
+                            <dxg:TableView x:Name="view" AutoWidth="True" GroupSummaryDisplayMode="AlignByColumns" NavigationStyle="Cell" ShowTotalSummary="True">
+                                <dxg:TableView.GroupColumnSummaryItemTemplate>
+                                    <DataTemplate>
+                                        <TextBlock Name="GroupColumnSummaryText" Text="{Binding Path=Value}" HorizontalAlignment="Left"/>
+                                        <DataTemplate.Triggers>
+                                            <DataTrigger Binding="{Binding Path=GroupRowData.IsFocused}" Value="False">
+                                                <Setter TargetName="GroupColumnSummaryText" Property="Foreground" >
+                                                    <Setter.Value>
+                                                        <MultiBinding Converter="{StaticResource GroupColumnSummaryForegroundConverter}">
+                                                            <Binding Path="Column.FieldName"/>
+                                                            <Binding Path="GroupRowData.GroupSummaryData[0].SummaryValue"/>
+                                                            <Binding Path="GroupRowData.GroupSummaryData[1].SummaryValue"/>
+                                                            <Binding Path="GroupRowData.GroupSummaryData[2].SummaryValue"/>
+                                                            <Binding Path="GroupRowData.GroupSummaryData[3].SummaryValue"/>
+                                                        </MultiBinding>
+                                                    </Setter.Value>
+                                                </Setter>
+                                            </DataTrigger>
+                                        </DataTemplate.Triggers>
+                                    </DataTemplate>
+                                </dxg:TableView.GroupColumnSummaryItemTemplate>
+
+                            </dxg:TableView>
+                        </dxg:GridControl.View>
+
+                        <dxg:GridControl.Columns>
+                            <dxg:GridColumn Name="gc_marked" FieldName="marked" AllowSorting="False" Header="Markieren" UnboundType="Boolean">
+                                <dxg:GridColumn.HeaderTemplate>
+                                    <DataTemplate>
+                                        <CheckBox IsChecked="{Binding Data.marked}" Content="{Resx gc_marked.CheckBox}" Checked="TimeEntryGrid_CheckEdit_Checked" Unchecked="TimeEntryGrid_CheckEdit_Unchecked" />
+                                    </DataTemplate>
+                                </dxg:GridColumn.HeaderTemplate>
+                                <dxg:GridColumn.CellTemplate>
+                                    <DataTemplate>
+                                        <CheckBox IsChecked="{Binding Data.marked}" HorizontalAlignment="Center" VerticalAlignment="Center" />
+                                    </DataTemplate>
+                                </dxg:GridColumn.CellTemplate>
+                            </dxg:GridColumn>
+
+                            <dxg:GridColumn Name="gc_status" Header="{Resx gc_status}" FieldName="synced" />
+                            <dxg:GridColumn Name="gc_kw" Header="{Resx gc_kw}" FieldName="kw" />
+                            <dxg:GridColumn Name="gc_tekz" Header="{Resx gc_tekz}" FieldName="tekz" />
+                            <dxg:GridColumn Name="gc_datum" SortMode="Custom" Header="{Resx gc_datum}" FieldName="datum" />
+                            <dxg:GridColumn Name="gc_taetigkeit" Header="{Resx gc_taetigkeit}" FieldName="taetigkeit">
+                                <dxg:GridColumn.CellTemplate>
+                                    <DataTemplate>
+                                        <TextBlock>
+                                            <Hyperlink NavigateUri="{Binding Data.taetigkeiturl}" Click="Hyperlink2_Click" TargetName="_blank">
+                                                <TextBlock Text="{Binding Data.taetigkeit}" />
+                                            </Hyperlink>
+                                    </TextBlock>
+                                    </DataTemplate>
+                                </dxg:GridColumn.CellTemplate>
+                            </dxg:GridColumn>
+                            <dxg:GridColumn Name="gc_mscrmuser" Header="{Resx gc_mscrmuser}" FieldName="mscrmuser" />
+                            <dxg:GridColumn Name="gc_beginn" Header="{Resx gc_beginn}" FieldName="beginn" />
+                            <dxg:GridColumn Name="gc_ende" Header="{Resx gc_ende}" FieldName="ende" />
+                            <dxg:GridColumn Name="gc_dauer" Header="{Resx gc_dauer}" FieldName="dauer" />
+                            <dxg:GridColumn Name="gc_zusatzzeit" Header="{Resx gc_zusatzzeit}" FieldName="zusatzzeit" />
+                            <dxg:GridColumn Name="gc_gesamtdauer" Header="{Resx gc_gesamtdauer}" FieldName="gesamtdauer" />
+                            <dxg:GridColumn Name="gc_mscrm_link" Header="{Resx gc_mscrm_link}" FieldName="mscrmlinktext">
+                                <dxg:GridColumn.CellTemplate>
+                                    <DataTemplate>
+                                        <TextBlock>
+                                            <Hyperlink NavigateUri="{Binding Data.mscrmlinkurl}" Click="Hyperlink_Click" TargetName="_blank">
+                                                <TextBlock Text="{Binding Data.mscrmlinktext}" />
+                                            </Hyperlink>
+                                    </TextBlock>
+                                    </DataTemplate>
+                                </dxg:GridColumn.CellTemplate>
+                            </dxg:GridColumn>
+                            <dxg:GridColumn Name="gc_mscrm_link2" Header="{Resx gc_mscrm_link2}" FieldName="mscrmlinktext2">
+                                <dxg:GridColumn.CellTemplate>
+                                    <DataTemplate>
+                                        <TextBlock>
+                                            <Hyperlink NavigateUri="{Binding Data.mscrmlinkurl2}" Click="Hyperlink_Click" TargetName="_blank">
+                                                <TextBlock Text="{Binding Data.mscrmlinktext2}" />
+                                            </Hyperlink>
+                                    </TextBlock>
+                                    </DataTemplate>
+                                </dxg:GridColumn.CellTemplate>
+                            </dxg:GridColumn>
+                            <dxg:GridColumn Name="gc_last_error" Header="{Resx gc_last_error}" FieldName="lasterror" />
+
+                        </dxg:GridControl.Columns>
+                    </dxg:GridControl>
+                </DockPanel>
+
+                <TabControl FontSize="11" Name="TimeEntryTabCtrl" Height="Auto" Grid.Row="2" Visibility="Visible" Width="Auto" Margin="2,5,8,5">
+                    <TabItem HorizontalAlignment="Stretch" Visibility="Collapsed" Width="Auto" Margin="-2,0,0,0" Header="{Resx tabTE_1}" Name="tabTE_1" >
+                        <Grid HorizontalAlignment="Stretch">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition MaxWidth="110" MinWidth="80" />
+                                <ColumnDefinition MaxWidth="100" MinWidth="40" />
+                                <ColumnDefinition MaxWidth="110" MinWidth="110" />
+                                <ColumnDefinition MaxWidth="100" MinWidth="90" />
+                                <ColumnDefinition MaxWidth="110" MinWidth="110" />
+                                <ColumnDefinition MaxWidth="110" MinWidth="100" />
+                                <ColumnDefinition MaxWidth="100" MinWidth="100" />
+                                <ColumnDefinition MaxWidth="100" MinWidth="10" />
+                                <ColumnDefinition MaxWidth="100" MinWidth="10" />
+                                <ColumnDefinition MaxWidth="100" MinWidth="10" />
+                                <ColumnDefinition MaxWidth="100" MinWidth="10" />
+                                <ColumnDefinition MaxWidth="10" MinWidth="0" />
+                                <ColumnDefinition MaxWidth="100" MinWidth="100" />
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="26" />
+                                <RowDefinition Height="26" />
+                                <RowDefinition Height="26" />
+                                <RowDefinition Height="26" />
+                                <RowDefinition Height="26" />
+                                <RowDefinition Height="26" />
+                                <RowDefinition Height="26" />
+                                <RowDefinition Height="26" />
+                            </Grid.RowDefinitions>
+                            <Label Grid.Row="0" Grid.Column="0" Padding="5,3,0,0" Content="{Resx Label1}"></Label>
+
+                            <Grid Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="5">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*" />
+                                    <ColumnDefinition Width="20" />
+                                    <ColumnDefinition Width="20" />
+                                </Grid.ColumnDefinitions>
+                                <dxe:ComboBoxEdit Grid.Column="0" AutoComplete="True" Width="Auto" Height="20" Name="cbTaetigkeit_1" />
+                                <Button Grid.Column="1" IsTabStop="False" Height="20" Padding="0,0,0,0" IsEnabled="True" Name="btnDeleteTaetigkeitToFavorites_1" ToolTip="{Resx btnDeleteTaetigkeitToFavorites}" Width="20" Click="btnDeleteTaetigkeitToFavorites_Click">
+                                    <Image Width="16" Name="btnAddbTaetigkeitToFavoritesDeleteImage_1" Source="/QuickTimeEntry;component/Images/16x16neu/Betreff_Löschen.png"></Image>
+                                </Button>
+                                <Button Grid.Column="2" IsTabStop="False" Height="20" Padding="0,0,0,0" IsEnabled="True" Name="btnAddTaetigkeitToFavorites_1" ToolTip="{Resx btnAddTaetigkeitToFavorites_1}" Width="20" Click="btnAddTaetigkeitToFavorites_Click">
+                                    <Image Width="16" Name="btnAddbTaetigkeitToFavoritesImage_1" Source="/QuickTimeEntry;component/Images/16x16neu/Betreff_Neu.png"></Image>
+                                </Button>
+                            </Grid>
+
+                            <Label Grid.Row="1" Grid.Column="0" Padding="5,3,0,0" Content="{Resx Label2}"></Label>
+                            <dxe:ComboBoxEdit AutoComplete="True" Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="1" Width="Auto" Height="20" Name="cbBezugEntity_1" SelectedIndexChanged="cbBezugEntity_SelectedIndexChanged" />
+
+                            <Grid Grid.Row="1" Grid.Column="2" Grid.ColumnSpan="4" >
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*" />
+                                    <ColumnDefinition Width="Auto" />
+                                    <ColumnDefinition Width="20" />
+                                    <ColumnDefinition Width="20" />
+                                    <ColumnDefinition Width="20" />
+                                    <ColumnDefinition Width="20" />
+                                </Grid.ColumnDefinitions>
+
+                                <dxe:ComboBoxEdit ImmediatePopup="True" FilterCondition="Contains" IncrementalFiltering="True" Width="Auto" Height="20" Name="cbMSCRMEntity_1" GotFocus="cbMSCRMEntity_GotFocus" LostFocus="cbMSCRMEntity_LostFocus" EditValueChanged="cbMSCRMEntity_EditValueChanged" />
+                                <Image Grid.Column="1" Width="16" Name="btnMSCRMEntityInfoImage_1" Source="/QuickTimeEntry;component/Images/16x16neu/OK.png"></Image>
+                                <!--<Button Grid.Column="2" IsTabStop="False" Height="20" Padding="0,0,0,0" IsEnabled="True" Name="btAddNewEntity_1" ToolTip="Neue Entität erstellen" Width="20" Click="btAddNewEntity_Click">
+                                    <Image Width="16" Name="btAddNewEntityImage_1" Source="/QuickTimeEntry;component/Images/16x16neu/Anfrage.png"></Image>
+                                </Button>-->
+                                <Button Grid.Column="3" IsTabStop="False" Height="20" Padding="0,0,0,0" IsEnabled="True" Name="btnExtendedSearch_1" ToolTip="{Resx btnExtendedSearch}" Width="20" Click="btnExtendedSearch_Click">
+                                    <Image Width="16" Name="btnExtendedSearchImage_1" Source="/QuickTimeEntry;component/Images/16x16neu/Suchen.png"></Image>
+                                </Button>
+                                <Button Grid.Column="4" IsTabStop="False" Height="20" Padding="0,0,0,0" IsEnabled="True" Name="btnFavorites_1" ToolTip="{Resx btnFavorites_1}" Width="20" Click="btnFavorites_Click">
+                                    <Image Width="16" Name="btnFavoritesImage_1" Source="/QuickTimeEntry;component/Images/16x16neu/Favorit_Auswahl.png"></Image>
+                                </Button>
+                                <Button Grid.Column="5" IsTabStop="False" Height="20" Padding="0,0,0,0" IsEnabled="True" Name="btnAddToFavorites_1" ToolTip="{Resx btnAddToFavorites}" Width="20" Click="btnAddToFavorites_Click">
+                                    <Image Width="16" Name="btnAddToFavoritesImage_1" Source="/QuickTimeEntry;component/Images/16x16neu/Favorit_Neu.png"></Image>
+                                </Button>
+
+                            </Grid>
+
+                            <Label Grid.Row="2" Grid.Column="0" Padding="5,3,0,0" Content="{Resx Label3}"></Label>
+                            <dxe:ComboBoxEdit AutoComplete="True" Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="1" Width="Auto" Height="20" Name="cbBezugEntity2_1" SelectedIndexChanged="cbBezugEntity2_SelectedIndexChanged" />
+
+                            <Grid Grid.Row="2" Grid.Column="2" Grid.ColumnSpan="4" >
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*" />
+                                    <ColumnDefinition Width="Auto" />
+                                    <ColumnDefinition Width="20" />
+                                    <ColumnDefinition Width="20" />
+                                    <ColumnDefinition Width="20" />
+                                    <ColumnDefinition Width="20" />
+                                </Grid.ColumnDefinitions>
+
+                                <dxe:ComboBoxEdit ImmediatePopup="True" FilterCondition="Contains" IncrementalFiltering="True" Width="Auto" Height="20" Name="cbMSCRMEntity2_1" GotFocus="cbMSCRMEntity_GotFocus" LostFocus="cbMSCRMEntity_LostFocus" EditValueChanged="cbMSCRMEntity2_EditValueChanged" />
+                                <Image Grid.Column="1" Width="16" Name="btnMSCRMEntityInfoImage2_1" Source="/QuickTimeEntry;component/Images/16x16neu/OK.png"></Image>
+                                <!--<Button Grid.Column="2" IsTabStop="False" Height="20" Padding="0,0,0,0" IsEnabled="True" Name="btAddNewEntity2_1" ToolTip="Neue Entität erstellen" Width="20" Click="btAddNewEntity2_Click">
+                                    <Image Width="16" Name="btAddNewEntityImage2_1" Source="/QuickTimeEntry;component/Images/16x16neu/Anfrage.png"></Image>
+                                </Button>-->
+                                <Button Grid.Column="3" IsTabStop="False" Height="20" Padding="0,0,0,0" IsEnabled="True" Name="btnExtendedSearch2_1" ToolTip="{Resx btnExtendedSearch}" Width="20" Click="btnExtendedSearch2_Click">
+                                    <Image Width="16" Name="btnExtendedSearchImage2_1" Source="/QuickTimeEntry;component/Images/16x16neu/Suchen.png"></Image>
+                                </Button>
+                                <Button Grid.Column="4" IsTabStop="False" Height="20" Padding="0,0,0,0" IsEnabled="True" Name="btnFavorites2_1" ToolTip="{Resx btnFavorites_1}" Width="20" Click="btnFavorites2_Click">
+                                    <Image Width="16" Name="btnFavoritesImage2_1" Source="/QuickTimeEntry;component/Images/16x16neu/Favorit_Auswahl.png"></Image>
+                                </Button>
+                                <Button Grid.Column="5" IsTabStop="False" Height="20" Padding="0,0,0,0" IsEnabled="True" Name="btnAddToFavorites2_1" ToolTip="{Resx btnAddToFavorites}" Width="20" Click="btnAddToFavorites2_Click">
+                                    <Image Width="16" Name="btnAddToFavoritesImage2_1" Source="/QuickTimeEntry;component/Images/16x16neu/Favorit_Neu.png"></Image>
+                                </Button>
+
+                            </Grid>
+
+                            <Label Grid.Row="3" Grid.Column="0" Padding="5,3,0,0" Content="{Resx Label4}"></Label>
+                            <dxe:DateEdit Grid.Row="3" Grid.Column="1" Width="100" Height="20" Name="deDatum_1"  />
+
+                            <Label Grid.Row="3" Grid.Column="2" Padding="5,3,0,0" Content="{Resx Label5}"></Label>
+                            <dxe:ComboBoxEdit ImmediatePopup="True" FilterCondition="Contains" IncrementalFiltering="True" Grid.Row="3" Grid.Column="3" LostFocus="cbAusgefuehrtDurch_LostFocus" Grid.ColumnSpan="3" Width="Auto" Height="20" Name="cbAusgefuehrtDurch_1" />
+
+                            <Label Grid.Row="4" Grid.Column="0" Padding="5,3,0,0" Content="{Resx Label6}"></Label>
+                            <Label Name="lblDauer_1" Grid.Row="4" Grid.Column="1" Padding="5,2,0,0">0,00</Label>
+
+                            <Label Grid.Row="4" Grid.Column="2" Padding="5,3,0,0" Content="{Resx Label7}"></Label>
+                            <dxe:ComboBoxEdit AutoComplete="True" Grid.Row="4" Grid.Column="3" Grid.ColumnSpan="3"  Width="Auto" Height="20" Name="cbAbrechnungsweise_1" />
+
+                            <Label Grid.Row="5" Grid.Column="0" Padding="5,3,0,0" Content="{Resx Label8}"></Label>
+                            <dxe:TextEdit EditValueChanged="te_Active_EditValueChanged" Grid.Row="5" Grid.Column="1" Width="100" Height="20" Name="tbZusatzzeit_1" MaskCulture="de-DE" MaskType="DateTime" Mask="HH:mm" MaskUseAsDisplayFormat="True">00:00</dxe:TextEdit>
+
+                            <Label Grid.Row="5" Grid.Column="2" Padding="5,3,0,0" Content="{Resx Label9}"></Label>
+                            <dxe:ComboBoxEdit AutoComplete="True" Grid.Row="5" Grid.Column="3" Grid.ColumnSpan="3"  Width="Auto" Height="20" Name="cbStatus_1" />
+
+                            <Label Grid.Row="6" Grid.Column="0" Padding="5,3,0,0" Content="{Resx Label10}"></Label>
+                            <Label Name="lblGesamtDauer_1" Grid.Row="6" Grid.Column="1" Padding="5,2,0,0">0.00</Label>
+
+                            <Label Grid.Row="6" Grid.Column="2" Padding="5,3,0,0" Content="{Resx Label11}"></Label>
+                            <dxe:CheckEdit IsTabStop="False" Grid.Row="6" Grid.Column="3" Margin="5,0,0,0" Name="ceFahrtkosten_1" />
+
+                            <Label Grid.Row="0"  Grid.Column="6" Padding="5,3,0,0" Content="{Resx Label12}"></Label>
+                            <TextBox TextWrapping="Wrap" AcceptsReturn="True" VerticalScrollBarVisibility="Visible" Grid.RowSpan="4" Name="teBeschreibung_1" Padding="0,0,0,0" Grid.Row="0" Grid.Column="7" Grid.ColumnSpan="4" Width="Auto" Height="Auto" />
+
+                            <Label Grid.Row="4" Grid.Column="6" Padding="5,3,0,0" Content="{Resx Label13}"></Label>
+                            <TextBox TextWrapping="Wrap" AcceptsReturn="True" VerticalScrollBarVisibility="Visible" Grid.RowSpan="4" Name="teAnmerkung_1" Grid.Row="4" Grid.Column="7" Grid.ColumnSpan="4" Width="Auto" Height="Auto" />
+
+                            <Button Grid.Row="0" Grid.Column="12" Grid.RowSpan="3" Height="Auto" IsEnabled="False" Margin="0,0,0,0" Name="btnTimerCtrl_1" Width="Auto" 
+
+Click="btnTimerCtrl_Click">
+                                <Image Width="40" Name="btnTimerCtrlImage_1" Source="/QuickTimeEntry;component/Images/media_play.png"></Image>
+                            </Button>
+                            <Label Grid.Row="4" Grid.Column="12" Padding="20,2,0,0" FontSize="15" Name="lblTimerCtrlInfo_1">00:00:00</Label>
+                            <Button Grid.Row="6" Width="90" Margin="0,0,0,0" Height="23" Grid.Column="12" Grid.ColumnSpan="1" Padding="0,0,0,0" Name="btnShowQuickTimeentryList_1" 
+
+ToolTip="{Resx btnShowQuickTimeentryList}" Click="btnShowQuickTimeentryList_Click">
+                                <StackPanel Orientation="Horizontal">
+                                    <Image Width="16" Name="ShowQuickTimeentryListImage_1" Margin="0,0,5,0" Source="/QuickTimeEntry;component/Images/16x16neu/Gestoppte_Zeiten_Anzeigen.png" />
+                                    <TextBlock Text="{Resx btnShowQuickTimeentryList_TextBlock}"></TextBlock>
+                                </StackPanel>
+                            </Button>
+
+                            <Button Grid.Row="7" Width="110" Margin="0,5,0,0" Grid.Column="0" Grid.ColumnSpan="1" Name="btnSaveTimeentry_1" Click="btnSaveTimeentry_Click" 
+
+IsDefault="False">
+                                <StackPanel Orientation="Horizontal">
+                                    <Image Width="16" Name="btnSaveTimeEntryImage_1" Margin="0,0,5,0" Source="/QuickTimeEntry;component/Images/16x16neu/Speichern.png" />
+                                    <TextBlock Text="{Resx btnSaveTimeentry_TextBlock}"></TextBlock>
+                                </StackPanel>
+                            </Button>
+                            <Button Grid.Row="7" Width="200" Margin="0,5,0,0" Grid.Column="1" Grid.ColumnSpan="2" Name="btnSaveAndNewTimeentry_1" 
+
+Click="btnSaveAndNewTimeentry_Click" IsDefault="False">
+                                <StackPanel Orientation="Horizontal">
+                                    <Image Width="16" Name="btnSaveAndNewImage_1" Margin="0,0,5,0" Source="/QuickTimeEntry;component/Images/16x16neu/Speichern_Neu.png" />
+                                    <TextBlock Text="{Resx btnSaveAndNewTimeentry_TextBlock}"></TextBlock>
+                                </StackPanel>
+                            </Button>
+
+                            <Button Grid.Row="7" Width="200" Margin="0,5,0,0" Grid.Column="3" Grid.ColumnSpan="2" Name="btnSaveAndCloseTimeentry_1" 
+
+Click="btnSaveAndCloseTimeentry_Click" IsDefault="False">
+                                <StackPanel Orientation="Horizontal">
+                                    <Image Width="16" Name="btnSaveAndCloseImage_1" Margin="0,0,5,0" Source="/QuickTimeEntry;component/Images/16x16neu/Speichern_Schließen.png" />
+                                    <TextBlock Text="{Resx btnSaveAndCloseTimeentry_TextBlock}"></TextBlock>
+                                </StackPanel>
+                            </Button>
+
+
+                            <Button Grid.Row="7" Width="100" Margin="0,5,0,0" Grid.Column="5" Grid.ColumnSpan="1" Name="btnCancelTimeentry_1" 
+
+Click="btnCancelTimeentry_Click">
+                                <StackPanel Orientation="Horizontal">
+                                    <Image Width="16" Name="btnCancelTimeentryImage_1" Margin="0,0,5,0" Source="/QuickTimeEntry;component/Images/16x16neu/Abbrechen.png" />
+                                    <TextBlock Text="{Resx btnCancelTimeentry_TextBlock}"></TextBlock>
+                                </StackPanel>
+                            </Button>
+
+                            <dxe:TextEdit Visibility="Hidden" Width="100" Height="20" Name="tbBeginn_1" MaskCulture="de-DE" MaskType="DateTime" Mask="HH:mm" MaskUseAsDisplayFormat="True">00:00</dxe:TextEdit>
+                            <dxe:TextEdit Visibility="Hidden" Width="100" Height="20" Name="tbEnde_1" MaskCulture="de-DE" MaskType="DateTime" Mask="HH:mm" MaskUseAsDisplayFormat="True">00:00</dxe:TextEdit>
+                        </Grid>
+                    </TabItem>
+                    <TabItem HorizontalAlignment="Stretch" Visibility="Collapsed" Margin="-2,0,0,0" Header="{Resx tabTE_2}" Name="tabTE_2">
+                        <Grid HorizontalAlignment="Stretch">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition MaxWidth="110" MinWidth="80" />
+                                <ColumnDefinition MaxWidth="100" MinWidth="40" />
+                                <ColumnDefinition MaxWidth="110" MinWidth="110" />
+                                <ColumnDefinition MaxWidth="100" MinWidth="90" />
+                                <ColumnDefinition MaxWidth="110" MinWidth="110" />
+                                <ColumnDefinition MaxWidth="110" MinWidth="100" />
+                                <ColumnDefinition MaxWidth="100" MinWidth="100" />
+                                <ColumnDefinition MaxWidth="100" MinWidth="10" />
+                                <ColumnDefinition MaxWidth="100" MinWidth="10" />
+                                <ColumnDefinition MaxWidth="100" MinWidth="10" />
+                                <ColumnDefinition MaxWidth="100" MinWidth="10" />
+                                <ColumnDefinition MaxWidth="10" MinWidth="0" />
+                                <ColumnDefinition MaxWidth="100" MinWidth="100" />
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="26" />
+                                <RowDefinition Height="26" />
+                                <RowDefinition Height="26" />
+                                <RowDefinition Height="26" />
+                                <RowDefinition Height="26" />
+                                <RowDefinition Height="26" />
+                                <RowDefinition Height="26" />
+                                <RowDefinition Height="26" />
+                            </Grid.RowDefinitions>
+                            <Label Grid.Row="0" Grid.Column="0" Padding="5,3,0,0" Content="{Resx Label1}"></Label>
+
+                            <Grid Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="5">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*" />
+                                    <ColumnDefinition Width="20" />
+                                    <ColumnDefinition Width="20" />
+                                </Grid.ColumnDefinitions>
+                                <dxe:ComboBoxEdit Grid.Column="0" AutoComplete="True" Width="Auto" Height="20" Name="cbTaetigkeit_2" />
+                                <Button Grid.Column="1" IsTabStop="False" Height="20" Padding="0,0,0,0" IsEnabled="True" Name="btnDeleteTaetigkeitToFavorites_2" ToolTip="{Resx btnDeleteTaetigkeitToFavorites}" Width="20" Click="btnDeleteTaetigkeitToFavorites_Click">
+                                    <Image Width="16" Name="btnAddbTaetigkeitToFavoritesDeleteImage_2" Source="/QuickTimeEntry;component/Images/16x16neu/Betreff_Löschen.png"></Image>
+                                </Button>
+                                <Button Grid.Column="2" IsTabStop="False" Height="20" Padding="0,0,0,0" IsEnabled="True" Name="btnAddTaetigkeitToFavorites_2" ToolTip="{Resx btnAddTaetigkeitToFavorites_2}" Width="20" Click="btnAddTaetigkeitToFavorites_Click">
+                                    <Image Width="16" Name="btnAddbTaetigkeitToFavoritesImage_2" Source="/QuickTimeEntry;component/Images/16x16neu/Betreff_Neu.png"></Image>
+                                </Button>
+                            </Grid>
+
+                            <Label Grid.Row="1" Grid.Column="0" Padding="5,3,0,0" Content="{Resx Label1}"></Label>
+                            <dxe:ComboBoxEdit AutoComplete="True" Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="1" Width="Auto" Height="20" Name="cbBezugEntity_2" SelectedIndexChanged="cbBezugEntity_SelectedIndexChanged" />
+
+                            <Grid Grid.Row="1" Grid.Column="2" Grid.ColumnSpan="4" >
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*" />
+                                    <ColumnDefinition Width="20" />
+                                    <ColumnDefinition Width="20" />
+                                    <ColumnDefinition Width="20" />
+                                    <ColumnDefinition Width="20" />
+                                    <ColumnDefinition Width="20" />
+                                </Grid.ColumnDefinitions>
+
+                                <dxe:ComboBoxEdit ImmediatePopup="True" FilterCondition="Contains" IncrementalFiltering="True" Grid.Column="0" Width="Auto" Height="20" Name="cbMSCRMEntity_2" GotFocus="cbMSCRMEntity_GotFocus" LostFocus="cbMSCRMEntity_LostFocus" EditValueChanged="cbMSCRMEntity_EditValueChanged" />
+                                <Image Grid.Column="1" Width="16" Name="btnMSCRMEntityInfoImage_2" Source="/QuickTimeEntry;component/Images/16x16neu/OK.png"></Image>
+                                <!--<Button Grid.Column="2" IsTabStop="False" Height="20" Padding="0,0,0,0" IsEnabled="True" Name="btAddNewEntity_2" ToolTip="Neue Entität erstellen" Width="20" Click="btAddNewEntity_Click">
+                                    <Image Width="16" Name="btAddNewEntityImage_2" Source="/QuickTimeEntry;component/Images/16x16neu/Anfrage.png"></Image>
+                                </Button>-->
+                                <Button Grid.Column="3" IsTabStop="False" Height="20" Padding="0,0,0,0" IsEnabled="True" Name="btnExtendedSearch_2" ToolTip="{Resx btnExtendedSearch}" Width="20" Click="btnExtendedSearch_Click">
+                                    <Image Width="16" Name="btnExtendedSearchImage_2" Source="/QuickTimeEntry;component/Images/16x16neu/Suchen.png"></Image>
+                                </Button>
+                                <Button Grid.Column="4" IsTabStop="False" Height="20" Padding="0,0,0,0" IsEnabled="True" Name="btnFavorites_2" ToolTip="{Resx btnFavorites_2}" Width="20" Click="btnFavorites_Click">
+                                    <Image Width="16" Name="btnFavoritesImage_2" Source="/QuickTimeEntry;component/Images/16x16neu/Favorit_Auswahl.png"></Image>
+                                </Button>
+                                <Button Grid.Column="5" IsTabStop="False" Height="20" Padding="0,0,0,0" IsEnabled="True" Name="btnAddToFavorites_2" ToolTip="{Resx btnAddToFavorites}" Width="20" Click="btnAddToFavorites_Click">
+                                    <Image Width="16" Name="btnAddToFavoritesImage_2" Source="/QuickTimeEntry;component/Images/16x16neu/Favorit_Neu.png"></Image>
+                                </Button>
+
+                            </Grid>
+
+                            <Label Grid.Row="2" Grid.Column="0" Padding="5,3,0,0" Content="{Resx Label3}"></Label>
+                            <dxe:ComboBoxEdit AutoComplete="True" Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="1" Width="Auto" Height="20" Name="cbBezugEntity2_2" SelectedIndexChanged="cbBezugEntity2_SelectedIndexChanged" />
+
+                            <Grid Grid.Row="2" Grid.Column="2" Grid.ColumnSpan="4" >
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*" />
+                                    <ColumnDefinition Width="20" />
+                                    <ColumnDefinition Width="20" />
+                                    <ColumnDefinition Width="20" />
+                                    <ColumnDefinition Width="20" />
+                                    <ColumnDefinition Width="20" />
+                                </Grid.ColumnDefinitions>
+
+                                <dxe:ComboBoxEdit ImmediatePopup="True" FilterCondition="Contains" IncrementalFiltering="True" Grid.Column="0" Width="Auto" Height="20" Name="cbMSCRMEntity2_2" GotFocus="cbMSCRMEntity_GotFocus" LostFocus="cbMSCRMEntity_LostFocus" EditValueChanged="cbMSCRMEntity2_EditValueChanged" />
+                                <Image Grid.Column="1" Width="16" Name="btnMSCRMEntityInfoImage2_2" Source="/QuickTimeEntry;component/Images/16x16neu/OK.png"></Image>
+                                <!--<Button Grid.Column="2" IsTabStop="False" Height="20" Padding="0,0,0,0" IsEnabled="True" Name="btAddNewEntity2_2" ToolTip="Neue Entität erstellen" Width="20" Click="btAddNewEntity2_Click">
+                                    <Image Width="16" Name="btAddNewEntityImage2_2" Source="/QuickTimeEntry;component/Images/16x16neu/Anfrage.png"></Image>
+                                </Button>-->
+                                <Button Grid.Column="3" IsTabStop="False" Height="20" Padding="0,0,0,0" IsEnabled="True" Name="btnExtendedSearch2_2" ToolTip="{Resx btnExtendedSearch}" Width="20" Click="btnExtendedSearch2_Click">
+                                    <Image Width="16" Name="btnExtendedSearchImage2_2" Source="/QuickTimeEntry;component/Images/16x16neu/Suchen.png"></Image>
+                                </Button>
+                                <Button Grid.Column="4" IsTabStop="False" Height="20" Padding="0,0,0,0" IsEnabled="True" Name="btnFavorites2_2" ToolTip="{Resx btnFavorites_2}" Width="20" Click="btnFavorites2_Click">
+                                    <Image Width="16" Name="btnFavoritesImage2_2" Source="/QuickTimeEntry;component/Images/16x16neu/Favorit_Auswahl.png"></Image>
+                                </Button>
+                                <Button Grid.Column="5" IsTabStop="False" Height="20" Padding="0,0,0,0" IsEnabled="True" Name="btnAddToFavorites2_2" ToolTip="{Resx btnAddToFavorites}" Width="20" Click="btnAddToFavorites2_Click">
+                                    <Image Width="16" Name="btnAddToFavoritesImage2_2" Source="/QuickTimeEntry;component/Images/16x16neu/Favorit_Neu.png"></Image>
+                                </Button>
+
+                            </Grid>
+
+                            <Label Grid.Row="3" Grid.Column="0" Padding="5,3,0,0" Content="{Resx Label4}"></Label>
+                            <dxe:DateEdit Grid.Row="3" Grid.Column="1" Width="100" Height="20" Name="deDatum_2"  />
+
+                            <Label Grid.Row="3" Grid.Column="2" Padding="5,3,0,0" Content="{Resx Label2}"></Label>
+                            <dxe:ComboBoxEdit ImmediatePopup="True" FilterCondition="Contains" IncrementalFiltering="True" Grid.Row="3" Grid.Column="3" LostFocus="cbAusgefuehrtDurch_LostFocus" Grid.ColumnSpan="3" Width="Auto" Height="20" Name="cbAusgefuehrtDurch_2" />
+
+                            <Label Grid.Row="4" Grid.Column="0" Padding="5,3,0,0" Content="{Resx Label6}"></Label>
+                            <Label Name="lblDauer_2" Grid.Row="4" Grid.Column="1" Padding="5,2,0,0">0,00</Label>
+
+                            <Label Grid.Row="4" Grid.Column="2" Padding="5,3,0,0" Content="{Resx Label7}"></Label>
+                            <dxe:ComboBoxEdit AutoComplete="True" Grid.Row="4" Grid.Column="3" Grid.ColumnSpan="3"  Width="Auto" Height="20" Name="cbAbrechnungsweise_2" />
+
+                            <Label Grid.Row="5" Grid.Column="0" Padding="5,3,0,0" Content="{Resx Label8}"></Label>
+                            <dxe:TextEdit EditValueChanged="te_Active_EditValueChanged" Grid.Row="5" Grid.Column="1" Width="100" Height="20" Name="tbZusatzzeit_2" MaskCulture="de-DE" MaskType="DateTime" Mask="HH:mm" MaskUseAsDisplayFormat="True">00:00</dxe:TextEdit>
+
+                            <Label Grid.Row="5" Grid.Column="2" Padding="5,3,0,0" Content="{Resx Label9}"></Label>
+                            <dxe:ComboBoxEdit AutoComplete="True" Grid.Row="5" Grid.Column="3" Grid.ColumnSpan="3"  Width="Auto" Height="20" Name="cbStatus_2" />
+
+                            <Label Grid.Row="6" Grid.Column="0" Padding="5,3,0,0" Content="{Resx Label10}"></Label>
+                            <Label Name="lblGesamtDauer_2" Grid.Row="6" Grid.Column="1" Padding="5,2,0,0">0.00</Label>
+
+                            <Label Grid.Row="6" Grid.Column="2" Padding="5,3,0,0" Content="{Resx Label11}"></Label>
+                            <dxe:CheckEdit IsTabStop="False" Grid.Row="6" Grid.Column="3" Margin="5,0,0,0" Name="ceFahrtkosten_2" />
+
+                            <Label Grid.Row="0"  Grid.Column="6" Padding="5,3,0,0" Content="{Resx Label12}"></Label>
+                            <TextBox TextWrapping="Wrap" AcceptsReturn="True" VerticalScrollBarVisibility="Visible" Grid.RowSpan="4" Name="teBeschreibung_2" Padding="0,0,0,0" Grid.Row="0" Grid.Column="7" Grid.ColumnSpan="4" Width="Auto" Height="Auto" />
+
+                            <Label Grid.Row="4" Grid.Column="6" Padding="5,3,0,0" Content="{Resx Label13}"></Label>
+                            <TextBox TextWrapping="Wrap" AcceptsReturn="True" VerticalScrollBarVisibility="Visible" Grid.RowSpan="4" Name="teAnmerkung_2" Grid.Row="4" Grid.Column="7" Grid.ColumnSpan="4" Width="Auto" Height="Auto" />
+
+                            <Button Grid.Row="0" Grid.Column="12" Grid.RowSpan="3" Height="Auto" IsEnabled="False" Margin="0,0,0,0" Name="btnTimerCtrl_2" Width="Auto" 
+
+Click="btnTimerCtrl_Click">
+                                <Image Width="40" Name="btnTimerCtrlImage_2" Source="/QuickTimeEntry;component/Images/media_play.png"></Image>
+                            </Button>
+                            <Label Grid.Row="4" Grid.Column="12" Padding="20,2,0,0" FontSize="15" Name="lblTimerCtrlInfo_2">00:00:00</Label>
+                            <Button Grid.Row="6" Width="90" Margin="0,0,0,0" Height="23" Grid.Column="12" Grid.ColumnSpan="1" Padding="0,0,0,0" Name="btnShowQuickTimeentryList_2" 
+
+ToolTip="{Resx btnShowQuickTimeentryList}" Click="btnShowQuickTimeentryList_Click">
+                                <StackPanel Orientation="Horizontal">
+                                    <Image Width="16" Name="ShowQuickTimeentryListImage_2" Margin="0,0,5,0" Source="/QuickTimeEntry;component/Images/16x16neu/Gestoppte_Zeiten_Anzeigen.png" />
+                                    <TextBlock Text="{Resx btnShowQuickTimeentryList_TextBlock}"></TextBlock>
+                                </StackPanel>
+                            </Button>
+
+
+                            <Button Grid.Row="7" Width="110" Margin="0,5,0,0" Grid.Column="0" Grid.ColumnSpan="1" Name="btnSaveTimeentry_2" Click="btnSaveTimeentry_Click" 
+
+IsDefault="False">
+                                <StackPanel Orientation="Horizontal">
+                                    <Image Width="16" Name="btnSaveTimeEntryImage_2" Margin="0,0,5,0" Source="/QuickTimeEntry;component/Images/16x16neu/Speichern.png" />
+                                    <TextBlock Text="{Resx btnSaveTimeentry_TextBlock}"></TextBlock>
+                                </StackPanel>
+                            </Button>
+
+                            <Button Grid.Row="7" Width="200" Margin="0,5,0,0" Grid.Column="1" Grid.ColumnSpan="2" Name="btnSaveAndNewTimeentry_2" 
+
+Click="btnSaveAndNewTimeentry_Click" IsDefault="False">
+                                <StackPanel Orientation="Horizontal">
+                                    <Image Width="16" Name="btnSaveAndNewImage_2" Margin="0,0,5,0" Source="/QuickTimeEntry;component/Images/16x16neu/Speichern_Neu.png" />
+                                    <TextBlock Text="{Resx btnSaveAndNewTimeentry_TextBlock}"></TextBlock>
+                                </StackPanel>
+                            </Button>
+
+                            <Button Grid.Row="7" Width="200" Margin="0,5,0,0" Grid.Column="3" Grid.ColumnSpan="2" Name="btnSaveAndCloseTimeentry_2" 
+
+Click="btnSaveAndCloseTimeentry_Click" IsDefault="False">
+                                <StackPanel Orientation="Horizontal">
+                                    <Image Width="16" Name="btnSaveAndCloseImage_2" Margin="0,0,5,0" Source="/QuickTimeEntry;component/Images/16x16neu/Speichern_Schließen.png" />
+                                    <TextBlock Text="{Resx btnSaveAndCloseTimeentry_TextBlock}"></TextBlock>
+                                </StackPanel>
+                            </Button>
+
+                            <Button Grid.Row="7" Width="100" Margin="0,5,0,0" Grid.Column="5" Grid.ColumnSpan="1" Name="btnCancelTimeentry_2" 
+
+Click="btnCancelTimeentry_Click">
+                                <StackPanel Orientation="Horizontal">
+                                    <Image Width="16" Name="btnCancelTimeentryImage_2" Margin="0,0,5,0" Source="/QuickTimeEntry;component/Images/16x16neu/Abbrechen.png" />
+                                    <TextBlock Text="{Resx btnCancelTimeentry_TextBlock}"></TextBlock>
+                                </StackPanel>
+                            </Button>
+
+                            <dxe:TextEdit Visibility="Hidden" Width="100" Height="20" Name="tbBeginn_2" MaskCulture="de-DE" MaskType="DateTime" Mask="HH:mm" MaskUseAsDisplayFormat="True">00:00</dxe:TextEdit>
+                            <dxe:TextEdit Visibility="Hidden" Width="100" Height="20" Name="tbEnde_2" MaskCulture="de-DE" MaskType="DateTime" Mask="HH:mm" MaskUseAsDisplayFormat="True">00:00</dxe:TextEdit>
+                        </Grid>
+
+                    </TabItem>
+                    <TabItem HorizontalAlignment="Stretch" Visibility="Collapsed" Margin="-2,0,0,0" Header="{Resx tabTE_3}" Name="tabTE_3">
+                        <Grid HorizontalAlignment="Stretch">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition MaxWidth="110" MinWidth="80" />
+                                <ColumnDefinition MaxWidth="100" MinWidth="40" />
+                                <ColumnDefinition MaxWidth="110" MinWidth="110" />
+                                <ColumnDefinition MaxWidth="100" MinWidth="90" />
+                                <ColumnDefinition MaxWidth="110" MinWidth="110" />
+                                <ColumnDefinition MaxWidth="110" MinWidth="100" />
+                                <ColumnDefinition MaxWidth="100" MinWidth="100" />
+                                <ColumnDefinition MaxWidth="100" MinWidth="10" />
+                                <ColumnDefinition MaxWidth="100" MinWidth="10" />
+                                <ColumnDefinition MaxWidth="100" MinWidth="10" />
+                                <ColumnDefinition MaxWidth="100" MinWidth="10" />
+                                <ColumnDefinition MaxWidth="10" MinWidth="0" />
+                                <ColumnDefinition MaxWidth="100" MinWidth="100" />
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="26" />
+                                <RowDefinition Height="26" />
+                                <RowDefinition Height="26" />
+                                <RowDefinition Height="26" />
+                                <RowDefinition Height="26" />
+                                <RowDefinition Height="26" />
+                                <RowDefinition Height="26" />
+                                <RowDefinition Height="26" />
+                            </Grid.RowDefinitions>
+                            <Label Grid.Row="0" Grid.Column="0" Padding="5,3,0,0" Content="{Resx Label1}"></Label>
+
+                            <Grid Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="5">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*" />
+                                    <ColumnDefinition Width="20" />
+                                    <ColumnDefinition Width="20" />
+                                </Grid.ColumnDefinitions>
+                                <dxe:ComboBoxEdit Grid.Column="0" AutoComplete="True" Width="Auto" Height="20" Name="cbTaetigkeit_3" />
+                                <Button Grid.Column="1" IsTabStop="False" Height="20" Padding="0,0,0,0" IsEnabled="True" Name="btnDeleteTaetigkeitToFavorites_3" ToolTip="{Resx btnDeleteTaetigkeitToFavorites}" Width="20" Click="btnDeleteTaetigkeitToFavorites_Click">
+                                    <Image Width="16" Name="btnAddbTaetigkeitToFavoritesDeleteImage_3" Source="/QuickTimeEntry;component/Images/16x16neu/Betreff_Löschen.png"></Image>
+                                </Button>
+                                <Button Grid.Column="2" IsTabStop="False" Height="20" Padding="0,0,0,0" IsEnabled="True" Name="btnAddTaetigkeitToFavorites_3" ToolTip="{Resx btnAddTaetigkeitToFavorites_1}" Width="20" Click="btnAddTaetigkeitToFavorites_Click">
+                                    <Image Width="16" Name="btnAddbTaetigkeitToFavoritesImage_3" Source="/QuickTimeEntry;component/Images/16x16neu/Betreff_Neu.png"></Image>
+                                </Button>
+                            </Grid>
+
+                            <Label Grid.Row="1" Grid.Column="0" Padding="5,3,0,0" Content="{Resx Label2}"></Label>
+                            <dxe:ComboBoxEdit AutoComplete="True" Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="1" Width="Auto" Height="20" Name="cbBezugEntity_3" SelectedIndexChanged="cbBezugEntity_SelectedIndexChanged" />
+
+                            <Grid Grid.Row="1" Grid.Column="2" Grid.ColumnSpan="4" >
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*" />
+                                    <ColumnDefinition Width="20" />
+                                    <ColumnDefinition Width="20" />
+                                    <ColumnDefinition Width="20" />
+                                    <ColumnDefinition Width="20" />
+                                    <ColumnDefinition Width="20" />
+                                </Grid.ColumnDefinitions>
+
+                                <dxe:ComboBoxEdit ImmediatePopup="True" FilterCondition="Contains" IncrementalFiltering="True" Grid.Column="0" Width="Auto" Height="20" Name="cbMSCRMEntity_3" GotFocus="cbMSCRMEntity_GotFocus" LostFocus="cbMSCRMEntity_LostFocus" EditValueChanged="cbMSCRMEntity_EditValueChanged" />
+                                <Image Grid.Column="1" Width="16" Name="btnMSCRMEntityInfoImage_3" Source="/QuickTimeEntry;component/Images/16x16neu/OK.png"></Image>
+                                <!--<Button Grid.Column="2" IsTabStop="False" Height="20" Padding="0,0,0,0" IsEnabled="True" Name="btAddNewEntity_3" ToolTip="Neue Entität erstellen" Width="20" Click="btAddNewEntity_Click">
+                                    <Image Width="16" Name="btAddNewEntityImage_3" Source="/QuickTimeEntry;component/Images/16x16neu/Anfrage.png"></Image>
+                                </Button>-->
+                                <Button Grid.Column="3" IsTabStop="False" Height="20" Padding="0,0,0,0" IsEnabled="True" Name="btnExtendedSearch_3" ToolTip="{Resx btnExtendedSearch}" Width="20" Click="btnExtendedSearch_Click">
+                                    <Image Width="16" Name="btnExtendedSearchImage_3" Source="/QuickTimeEntry;component/Images/16x16neu/Suchen.png"></Image>
+                                </Button>
+                                <Button Grid.Column="4" Height="20" IsTabStop="False" Padding="0,0,0,0" IsEnabled="True" Name="btnFavorites_3" ToolTip="{Resx btnFavorites_2}" Width="20" Click="btnFavorites_Click">
+                                    <Image Width="16" Name="btnFavoritesImage_3" Source="/QuickTimeEntry;component/Images/16x16neu/Favorit_Auswahl.png"></Image>
+                                </Button>
+                                <Button Grid.Column="5" IsTabStop="False" Height="20" Padding="0,0,0,0" IsEnabled="True" Name="btnAddToFavorites_3" ToolTip="{Resx btnAddToFavorites}" Width="20" Click="btnAddToFavorites_Click">
+                                    <Image Width="16" Name="btnAddToFavoritesImage_3" Source="/QuickTimeEntry;component/Images/16x16neu/Favorit_Neu.png"></Image>
+                                </Button>
+
+                            </Grid>
+
+                            <Label Grid.Row="2" Grid.Column="0" Padding="5,3,0,0" Content="{Resx Label3}"></Label>
+                            <dxe:ComboBoxEdit AutoComplete="True" Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="1" Width="Auto" Height="20" Name="cbBezugEntity2_3" SelectedIndexChanged="cbBezugEntity2_SelectedIndexChanged" />
+
+                            <Grid Grid.Row="2" Grid.Column="2" Grid.ColumnSpan="4" >
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*" />
+                                    <ColumnDefinition Width="20" />
+                                    <ColumnDefinition Width="20" />
+                                    <ColumnDefinition Width="20" />
+                                    <ColumnDefinition Width="20" />
+                                    <ColumnDefinition Width="20" />
+                                </Grid.ColumnDefinitions>
+
+                                <dxe:ComboBoxEdit ImmediatePopup="True" FilterCondition="Contains" IncrementalFiltering="True" Grid.Column="0" Width="Auto" Height="20" Name="cbMSCRMEntity2_3" GotFocus="cbMSCRMEntity_GotFocus" LostFocus="cbMSCRMEntity_LostFocus" EditValueChanged="cbMSCRMEntity2_EditValueChanged" />
+                                <Image Grid.Column="1" Width="16" Name="btnMSCRMEntityInfoImage2_3" Source="/QuickTimeEntry;component/Images/16x16neu/OK.png"></Image>
+                                <!--<Button Grid.Column="2" IsTabStop="False" Height="20" Padding="0,0,0,0" IsEnabled="True" Name="btAddNewEntity2_3" ToolTip="Neue Entität erstellen" Width="20" Click="btAddNewEntity2_Click">
+                                    <Image Width="16" Name="btAddNewEntityImage2_3" Source="/QuickTimeEntry;component/Images/16x16neu/Anfrage.png"></Image>
+                                </Button>-->
+                                <Button Grid.Column="3" IsTabStop="False" Height="20" Padding="0,0,0,0" IsEnabled="True" Name="btnExtendedSearch2_3" ToolTip="{Resx btnExtendedSearch}" Width="20" Click="btnExtendedSearch2_Click">
+                                    <Image Width="16" Name="btnExtendedSearchImage2_3" Source="/QuickTimeEntry;component/Images/16x16neu/Suchen.png"></Image>
+                                </Button>
+                                <Button Grid.Column="4" Height="20" IsTabStop="False" Padding="0,0,0,0" IsEnabled="True" Name="btnFavorites2_3" ToolTip="{Resx btnFavorites_2}" Width="20" Click="btnFavorites2_Click">
+                                    <Image Width="16" Name="btnFavoritesImage2_3" Source="/QuickTimeEntry;component/Images/16x16neu/Favorit_Auswahl.png"></Image>
+                                </Button>
+                                <Button Grid.Column="5" IsTabStop="False" Height="20" Padding="0,0,0,0" IsEnabled="True" Name="btnAddToFavorites2_3" ToolTip="{Resx btnAddToFavorites}" Width="20" Click="btnAddToFavorites2_Click">
+                                    <Image Width="16" Name="btnAddToFavoritesImage2_3" Source="/QuickTimeEntry;component/Images/16x16neu/Favorit_Neu.png"></Image>
+                                </Button>
+
+                            </Grid>
+
+                            <Label Grid.Row="3" Grid.Column="0" Padding="5,3,0,0" Content="{Resx Label4}"></Label>
+                            <dxe:DateEdit Grid.Row="3" Grid.Column="1" Width="100" Height="20" Name="deDatum_3"  />
+
+                            <Label Grid.Row="3" Grid.Column="2" Padding="5,3,0,0" Content="{Resx Label5}"></Label>
+                            <dxe:ComboBoxEdit ImmediatePopup="True" FilterCondition="Contains" IncrementalFiltering="True" Grid.Row="3" Grid.Column="3" LostFocus="cbAusgefuehrtDurch_LostFocus" Grid.ColumnSpan="3" Width="Auto" Height="20" Name="cbAusgefuehrtDurch_3" />
+
+                            <Label Grid.Row="4" Grid.Column="0" Padding="5,3,0,0" Content="{Resx Label6}"></Label>
+                            <Label Name="lblDauer_3" Grid.Row="4" Grid.Column="1" Padding="5,2,0,0">0,00</Label>
+
+                            <Label Grid.Row="4" Grid.Column="2" Padding="5,3,0,0" Content="{Resx Label7}"></Label>
+                            <dxe:ComboBoxEdit AutoComplete="True" Grid.Row="4" Grid.Column="3" Grid.ColumnSpan="3"  Width="Auto" Height="20" Name="cbAbrechnungsweise_3" />
+
+                            <Label Grid.Row="5" Grid.Column="0" Padding="5,3,0,0" Content="{Resx Label8}"></Label>
+                            <dxe:TextEdit EditValueChanged="te_Active_EditValueChanged" Grid.Row="5" Grid.Column="1" Width="100" Height="20" Name="tbZusatzzeit_3" MaskCulture="de-DE" MaskType="DateTime" Mask="HH:mm" MaskUseAsDisplayFormat="True">00:00</dxe:TextEdit>
+
+                            <Label Grid.Row="5" Grid.Column="2" Padding="5,3,0,0" Content="{Resx Label9}"></Label>
+                            <dxe:ComboBoxEdit AutoComplete="True" Grid.Row="5" Grid.Column="3" Grid.ColumnSpan="3"  Width="Auto" Height="20" Name="cbStatus_3" />
+
+                            <Label Grid.Row="6" Grid.Column="0" Padding="5,3,0,0" Content="{Resx Label10}"></Label>
+                            <Label Name="lblGesamtDauer_3" Grid.Row="6" Grid.Column="1" Padding="5,2,0,0">0.00</Label>
+
+                            <Label Grid.Row="6" Grid.Column="2" Padding="5,3,0,0" Content="{Resx Label11}"></Label>
+                            <dxe:CheckEdit IsTabStop="False" Grid.Row="6" Grid.Column="3" Margin="5,0,0,0" Name="ceFahrtkosten_3" />
+
+                            <Label Grid.Row="0"  Grid.Column="6" Padding="5,3,0,0" Content="{Resx Label12}"></Label>
+                            <TextBox TextWrapping="Wrap" AcceptsReturn="True" VerticalScrollBarVisibility="Visible" Grid.RowSpan="4" Name="teBeschreibung_3" Padding="0,0,0,0" Grid.Row="0" Grid.Column="7" Grid.ColumnSpan="4" Width="Auto" Height="Auto" />
+
+                            <Label Grid.Row="4" Grid.Column="6" Padding="5,3,0,0" Content="{Resx Label13}"></Label>
+                            <TextBox TextWrapping="Wrap" AcceptsReturn="True" VerticalScrollBarVisibility="Visible" Grid.RowSpan="4" Name="teAnmerkung_3" Grid.Row="4" Grid.Column="7" Grid.ColumnSpan="4" Width="Auto" Height="Auto" />
+
+                            <Button Grid.Row="0" Grid.Column="12" Grid.RowSpan="3" Height="Auto" IsEnabled="False" Margin="0,0,0,0" Name="btnTimerCtrl_3" Width="Auto" 
+
+Click="btnTimerCtrl_Click">
+                                <Image Width="40" Name="btnTimerCtrlImage_3" Source="/QuickTimeEntry;component/Images/media_play.png"></Image>
+                            </Button>
+                            <Label Grid.Row="4" Grid.Column="12" Padding="20,2,0,0" FontSize="15" Name="lblTimerCtrlInfo_3">00:00:00</Label>
+                            <Button Grid.Row="6" Width="90" Margin="0,0,0,0" Height="23" Grid.Column="12" Grid.ColumnSpan="1" Padding="0,0,0,0" Name="btnShowQuickTimeentryList_3" 
+
+ToolTip="{Resx btnShowQuickTimeentryList}" Click="btnShowQuickTimeentryList_Click">
+                                <StackPanel Orientation="Horizontal">
+                                    <Image Width="16" Name="ShowQuickTimeentryListImage_3" Margin="0,0,5,0" Source="/QuickTimeEntry;component/Images/16x16neu/Gestoppte_Zeiten_Anzeigen.png" />
+                                    <TextBlock Text="{Resx btnShowQuickTimeentryList_TextBlock}"></TextBlock>
+                                </StackPanel>
+                            </Button>
+
+                            <Button Grid.Row="7" Width="110" Margin="0,5,0,0" Grid.Column="0" Grid.ColumnSpan="1" Name="btnSaveTimeentry_3" Click="btnSaveTimeentry_Click" IsDefault="False">
+                                <StackPanel Orientation="Horizontal">
+                                    <Image Width="16" Name="btnSaveTimeEntryImage_3" Margin="0,0,5,0" Source="/QuickTimeEntry;component/Images/16x16neu/Speichern.png" />
+                                    <TextBlock Text="{Resx btnSaveTimeentry_TextBlock}"></TextBlock>
+                                </StackPanel>
+                            </Button>
+
+                            <Button Grid.Row="7" Width="200" Margin="0,5,0,0" Grid.Column="1" Grid.ColumnSpan="2" Name="btnSaveAndNewTimeentry_3" Click="btnSaveAndNewTimeentry_Click" IsDefault="False">
+                                <StackPanel Orientation="Horizontal">
+                                    <Image Width="16" Name="btnSaveAndNewImage_3" Margin="0,0,5,0" Source="/QuickTimeEntry;component/Images/16x16neu/Speichern_Neu.png" />
+                                    <TextBlock Text="{Resx btnSaveAndNewTimeentry_TextBlock}"></TextBlock>
+                                </StackPanel>
+                            </Button>
+
+                            <Button Grid.Row="7" Width="200" Margin="0,5,0,0" Grid.Column="3" Grid.ColumnSpan="2" Name="btnSaveAndCloseTimeentry_3" 
+
+Click="btnSaveAndCloseTimeentry_Click" IsDefault="False">
+                                <StackPanel Orientation="Horizontal">
+                                    <Image Width="16" Name="btnSaveAndCloseImage_3" Margin="0,0,5,0" Source="/QuickTimeEntry;component/Images/16x16neu/Speichern_Schließen.png" />
+                                    <TextBlock Text="{Resx btnSaveAndCloseTimeentry_TextBlock}"></TextBlock>
+                                </StackPanel>
+                            </Button>
+
+                            <Button Grid.Row="7" Width="100" Margin="0,5,0,0" Grid.Column="5" Grid.ColumnSpan="1" Name="btnCancelTimeentry_3" 
+
+Click="btnCancelTimeentry_Click">
+                                <StackPanel Orientation="Horizontal">
+                                    <Image Width="16" Name="btnCancelTimeentryImage_3" Margin="0,0,5,0" Source="/QuickTimeEntry;component/Images/16x16neu/Abbrechen.png" />
+                                    <TextBlock Text="{Resx btnCancelTimeentry_TextBlock}"></TextBlock>
+                                </StackPanel>
+                            </Button>
+
+                            <dxe:TextEdit Visibility="Hidden" Width="100" Height="20" Name="tbBeginn_3" MaskCulture="de-DE" MaskType="DateTime" Mask="HH:mm" MaskUseAsDisplayFormat="True">00:00</dxe:TextEdit>
+                            <dxe:TextEdit Visibility="Hidden" Width="100" Height="20" Name="tbEnde_3" MaskCulture="de-DE" MaskType="DateTime" Mask="HH:mm" MaskUseAsDisplayFormat="True">00:00</dxe:TextEdit>
+                        </Grid>
+
+                    </TabItem>
+                    <TabItem HorizontalAlignment="Stretch" Visibility="Collapsed" Margin="-2,0,0,0" Header="{Resx tabTE_4}" Name="tabTE_4">
+                        <Grid HorizontalAlignment="Stretch">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition MaxWidth="110" MinWidth="80" />
+                                <ColumnDefinition MaxWidth="100" MinWidth="40" />
+                                <ColumnDefinition MaxWidth="110" MinWidth="110" />
+                                <ColumnDefinition MaxWidth="100" MinWidth="90" />
+                                <ColumnDefinition MaxWidth="110" MinWidth="110" />
+                                <ColumnDefinition MaxWidth="110" MinWidth="100" />
+                                <ColumnDefinition MaxWidth="100" MinWidth="100" />
+                                <ColumnDefinition MaxWidth="100" MinWidth="10" />
+                                <ColumnDefinition MaxWidth="100" MinWidth="10" />
+                                <ColumnDefinition MaxWidth="100" MinWidth="10" />
+                                <ColumnDefinition MaxWidth="100" MinWidth="10" />
+                                <ColumnDefinition MaxWidth="10" MinWidth="0" />
+                                <ColumnDefinition MaxWidth="100" MinWidth="100" />
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="26" />
+                                <RowDefinition Height="26" />
+                                <RowDefinition Height="26" />
+                                <RowDefinition Height="26" />
+                                <RowDefinition Height="26" />
+                                <RowDefinition Height="26" />
+                                <RowDefinition Height="26" />
+                                <RowDefinition Height="26" />
+                            </Grid.RowDefinitions>
+                            <Label Grid.Row="0" Grid.Column="0" Padding="5,3,0,0" Content="{Resx Label1}"></Label>
+
+                            <Grid Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="5">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*" />
+                                    <ColumnDefinition Width="20" />
+                                    <ColumnDefinition Width="20" />
+                                </Grid.ColumnDefinitions>
+                                <dxe:ComboBoxEdit Grid.Column="0" AutoComplete="True" Width="Auto" Height="20" Name="cbTaetigkeit_4" />
+                                <Button Grid.Column="1" IsTabStop="False" Height="20" Padding="0,0,0,0" IsEnabled="True" Name="btnDeleteTaetigkeitToFavorites_4" ToolTip="{Resx btnDeleteTaetigkeitToFavorites}" Width="20" Click="btnDeleteTaetigkeitToFavorites_Click">
+                                    <Image Width="16" Name="btnAddbTaetigkeitToFavoritesDeleteImage_4" Source="/QuickTimeEntry;component/Images/16x16neu/Betreff_Löschen.png"></Image>
+                                </Button>
+                                <Button Grid.Column="2" IsTabStop="False" Height="20" Padding="0,0,0,0" IsEnabled="True" Name="btnAddTaetigkeitToFavorites_4" ToolTip="{Resx btnAddTaetigkeitToFavorites_1}" Width="20" Click="btnAddTaetigkeitToFavorites_Click">
+                                    <Image Width="16" Name="btnAddbTaetigkeitToFavoritesImage_4" Source="/QuickTimeEntry;component/Images/16x16neu/Betreff_Neu.png"></Image>
+                                </Button>
+                            </Grid>
+
+                            <Label Grid.Row="1" Grid.Column="0" Padding="5,3,0,0" Content="{Resx Label2}"></Label>
+                            <dxe:ComboBoxEdit AutoComplete="True" Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="1" Width="Auto" Height="20" Name="cbBezugEntity_4" SelectedIndexChanged="cbBezugEntity_SelectedIndexChanged" />
+
+                            <Grid Grid.Row="1" Grid.Column="2" Grid.ColumnSpan="4" >
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*" />
+                                    <ColumnDefinition Width="20" />
+                                    <ColumnDefinition Width="20" />
+                                    <ColumnDefinition Width="20" />
+                                    <ColumnDefinition Width="20" />
+                                    <ColumnDefinition Width="20" />
+                                </Grid.ColumnDefinitions>
+
+                                <dxe:ComboBoxEdit ImmediatePopup="True" FilterCondition="Contains" IncrementalFiltering="True" Grid.Column="0" Width="Auto" Height="20" Name="cbMSCRMEntity_4" GotFocus="cbMSCRMEntity_GotFocus" LostFocus="cbMSCRMEntity_LostFocus" EditValueChanged="cbMSCRMEntity_EditValueChanged" />
+                                <Image Grid.Column="1" Width="16" Name="btnMSCRMEntityInfoImage_4" Source="/QuickTimeEntry;component/Images/16x16neu/OK.png"></Image>
+                                <!--<Button Grid.Column="2" IsTabStop="False" Height="20" Padding="0,0,0,0" IsEnabled="True" Name="btAddNewEntity_4" ToolTip="Neue Entität erstellen" Width="20" Click="btAddNewEntity_Click">
+                                    <Image Width="16" Name="btAddNewEntityImage_4" Source="/QuickTimeEntry;component/Images/16x16neu/Anfrage.png"></Image>
+                                </Button>-->
+                                <Button Grid.Column="3" IsTabStop="False" Height="20" Padding="0,0,0,0" IsEnabled="True" Name="btnExtendedSearch_4" ToolTip="{Resx btnExtendedSearch}" Width="20" Click="btnExtendedSearch_Click">
+                                    <Image Width="16" Name="btnExtendedSearchImage_4" Source="/QuickTimeEntry;component/Images/16x16neu/Suchen.png"></Image>
+                                </Button>
+                                <Button Grid.Column="4" IsTabStop="False" Height="20" Padding="0,0,0,0" IsEnabled="True" Name="btnFavorites_4" ToolTip="{Resx btnFavorites_2}" Width="20" Click="btnFavorites_Click">
+                                    <Image Width="16" Name="btnFavoritesImage_4" Source="/QuickTimeEntry;component/Images/16x16neu/Favorit_Auswahl.png"></Image>
+                                </Button>
+                                <Button Grid.Column="5" IsTabStop="False" Height="20" Padding="0,0,0,0" IsEnabled="True" Name="btnAddToFavorites_4" ToolTip="{Resx btnAddToFavorites}" Width="20" Click="btnAddToFavorites_Click">
+                                    <Image Width="16" Name="btnAddToFavoritesImage_4" Source="/QuickTimeEntry;component/Images/16x16neu/Favorit_Neu.png"></Image>
+                                </Button>
+
+                            </Grid>
+
+                            <Label Grid.Row="2" Grid.Column="0" Padding="5,3,0,0" Content="{Resx Label3}"></Label>
+                            <dxe:ComboBoxEdit AutoComplete="True" Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="1" Width="Auto" Height="20" Name="cbBezugEntity2_4" SelectedIndexChanged="cbBezugEntity2_SelectedIndexChanged" />
+
+                            <Grid Grid.Row="2" Grid.Column="2" Grid.ColumnSpan="4" >
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*" />
+                                    <ColumnDefinition Width="20" />
+                                    <ColumnDefinition Width="20" />
+                                    <ColumnDefinition Width="20" />
+                                    <ColumnDefinition Width="20" />
+                                    <ColumnDefinition Width="20" />
+                                </Grid.ColumnDefinitions>
+
+                                <dxe:ComboBoxEdit ImmediatePopup="True" FilterCondition="Contains" IncrementalFiltering="True" Grid.Column="0" Width="Auto" Height="20" Name="cbMSCRMEntity2_4" GotFocus="cbMSCRMEntity_GotFocus" LostFocus="cbMSCRMEntity_LostFocus" EditValueChanged="cbMSCRMEntity2_EditValueChanged" />
+                                <Image Grid.Column="1" Width="16" Name="btnMSCRMEntityInfoImage2_4" Source="/QuickTimeEntry;component/Images/16x16neu/OK.png"></Image>
+                                <!--<Button Grid.Column="2" IsTabStop="False" Height="20" Padding="0,0,0,0" IsEnabled="True" Name="btAddNewEntity2_4" ToolTip="Neue Entität erstellen" Width="20" Click="btAddNewEntity2_Click">
+                                    <Image Width="16" Name="btAddNewEntityImage2_4" Source="/QuickTimeEntry;component/Images/16x16neu/Anfrage.png"></Image>
+                                </Button>-->
+                                <Button Grid.Column="3" IsTabStop="False" Height="20" Padding="0,0,0,0" IsEnabled="True" Name="btnExtendedSearch2_4" ToolTip="{Resx btnExtendedSearch}" Width="20" Click="btnExtendedSearch2_Click">
+                                    <Image Width="16" Name="btnExtendedSearchImage2_4" Source="/QuickTimeEntry;component/Images/16x16neu/Suchen.png"></Image>
+                                </Button>
+                                <Button Grid.Column="4" IsTabStop="False" Height="20" Padding="0,0,0,0" IsEnabled="True" Name="btnFavorites2_4" ToolTip="{Resx btnFavorites_2}" Width="20" Click="btnFavorites2_Click">
+                                    <Image Width="16" Name="btnFavoritesImage2_4" Source="/QuickTimeEntry;component/Images/16x16neu/Favorit_Auswahl.png"></Image>
+                                </Button>
+                                <Button Grid.Column="5" IsTabStop="False" Height="20" Padding="0,0,0,0" IsEnabled="True" Name="btnAddToFavorites2_4" ToolTip="{Resx btnAddToFavorites}" Width="20" Click="btnAddToFavorites_Click">
+                                    <Image Width="16" Name="btnAddToFavoritesImage2_4" Source="/QuickTimeEntry;component/Images/16x16neu/Favorit_Neu.png"></Image>
+                                </Button>
+
+                            </Grid>
+
+                            <Label Grid.Row="3" Grid.Column="0" Padding="5,3,0,0" Content="{Resx Label4}"></Label>
+                            <dxe:DateEdit Grid.Row="3" Grid.Column="1" Width="100" Height="20" Name="deDatum_4"  />
+
+                            <Label Grid.Row="3" Grid.Column="2" Padding="5,3,0,0" Content="{Resx Label5}"></Label>
+                            <dxe:ComboBoxEdit ImmediatePopup="True" FilterCondition="Contains" IncrementalFiltering="True" Grid.Row="3" Grid.Column="3" LostFocus="cbAusgefuehrtDurch_LostFocus" Grid.ColumnSpan="3" Width="Auto" Height="20" Name="cbAusgefuehrtDurch_4" />
+
+                            <Label Grid.Row="4" Grid.Column="0" Padding="5,3,0,0" Content="{Resx Label6}"></Label>
+                            <Label Name="lblDauer_4" Grid.Row="4" Grid.Column="1" Padding="5,2,0,0">0,00</Label>
+
+                            <Label Grid.Row="4" Grid.Column="2" Padding="5,3,0,0" Content="{Resx Label7}"></Label>
+                            <dxe:ComboBoxEdit AutoComplete="True" Grid.Row="4" Grid.Column="3" Grid.ColumnSpan="3"  Width="Auto" Height="20" Name="cbAbrechnungsweise_4" />
+
+                            <Label Grid.Row="5" Grid.Column="0" Padding="5,3,0,0" Content="{Resx Label8}"></Label>
+                            <dxe:TextEdit EditValueChanged="te_Active_EditValueChanged" Grid.Row="5" Grid.Column="1" Width="100" Height="20" Name="tbZusatzzeit_4" MaskCulture="de-DE" MaskType="DateTime" Mask="HH:mm" MaskUseAsDisplayFormat="True">00:00</dxe:TextEdit>
+
+                            <Label Grid.Row="5" Grid.Column="2" Padding="5,3,0,0" Content="{Resx Label9}"></Label>
+                            <dxe:ComboBoxEdit AutoComplete="True" Grid.Row="5" Grid.Column="3" Grid.ColumnSpan="3"  Width="Auto" Height="20" Name="cbStatus_4" />
+
+                            <Label Grid.Row="6" Grid.Column="0" Padding="5,3,0,0" Content="{Resx Label10}"></Label>
+                            <Label Name="lblGesamtDauer_4" Grid.Row="6" Grid.Column="1" Padding="5,2,0,0">0.00</Label>
+
+                            <Label Grid.Row="6" Grid.Column="2" Padding="5,3,0,0" Content="{Resx Label11}"></Label>
+                            <dxe:CheckEdit IsTabStop="False" Grid.Row="6" Grid.Column="3" Margin="5,0,0,0" Name="ceFahrtkosten_4" />
+
+                            <Label Grid.Row="0"  Grid.Column="6" Padding="5,3,0,0" Content="{Resx Label12}"></Label>
+                            <TextBox TextWrapping="Wrap" AcceptsReturn="True" VerticalScrollBarVisibility="Visible" Grid.RowSpan="4" Name="teBeschreibung_4" Padding="0,0,0,0" Grid.Row="0" Grid.Column="7" Grid.ColumnSpan="4" Width="Auto" Height="Auto" />
+
+                            <Label Grid.Row="4" Grid.Column="6" Padding="5,3,0,0" Content="{Resx Label13}"></Label>
+                            <TextBox TextWrapping="Wrap" AcceptsReturn="True" VerticalScrollBarVisibility="Visible" Grid.RowSpan="4" Name="teAnmerkung_4" Grid.Row="4" Grid.Column="7" Grid.ColumnSpan="4" Width="Auto" Height="Auto" />
+
+                            <Button Grid.Row="0" Grid.Column="12" Grid.RowSpan="3" Height="Auto" IsEnabled="False" Margin="0,0,0,0" Name="btnTimerCtrl_4" Width="Auto" 
+
+Click="btnTimerCtrl_Click">
+                                <Image Width="40" Name="btnTimerCtrlImage_4" Source="/QuickTimeEntry;component/Images/media_play.png"></Image>
+                            </Button>
+                            <Label Grid.Row="4" Grid.Column="12" Padding="20,2,0,0" FontSize="15" Name="lblTimerCtrlInfo_4">00:00:00</Label>
+                            <Button Grid.Row="6" Width="90" Margin="0,0,0,0" Height="23" Grid.Column="12" Grid.ColumnSpan="1" Padding="0,0,0,0" Name="btnShowQuickTimeentryList_4" 
+
+ToolTip="{Resx btnShowQuickTimeentryList}" Click="btnShowQuickTimeentryList_Click">
+                                <StackPanel Orientation="Horizontal">
+                                    <Image Width="16" Name="ShowQuickTimeentryListImage_4" Margin="0,0,5,0" Source="/QuickTimeEntry;component/Images/16x16neu/Gestoppte_Zeiten_Anzeigen.png" />
+                                    <TextBlock Text="{Resx btnShowQuickTimeentryList_TextBlock}"></TextBlock>
+                                </StackPanel>
+                            </Button>
+
+                            <Button Grid.Row="7" Width="110" Margin="0,5,0,0" Grid.Column="0" Grid.ColumnSpan="1" Name="btnSaveTimeentry_4" Click="btnSaveTimeentry_Click" 
+
+IsDefault="False">
+                                <StackPanel Orientation="Horizontal">
+                                    <Image Width="16" Name="btnSaveTimeEntryImage_4" Margin="0,0,5,0" Source="/QuickTimeEntry;component/Images/16x16neu/Speichern.png" />
+                                    <TextBlock Text="{Resx btnSaveTimeentry_TextBlock}"></TextBlock>
+                                </StackPanel>
+                            </Button>
+
+                            <Button Grid.Row="7" Width="200" Margin="0,5,0,0" Grid.Column="1" Grid.ColumnSpan="2" Name="btnSaveAndNewTimeentry_4" Click="btnSaveAndNewTimeentry_Click" IsDefault="False">
+                                <StackPanel Orientation="Horizontal">
+                                    <Image Width="16" Name="btnSaveAndNewImage_4" Margin="0,0,5,0" Source="/QuickTimeEntry;component/Images/16x16neu/Speichern_Neu.png" />
+                                    <TextBlock Text="{Resx btnSaveAndNewTimeentry_TextBlock}"></TextBlock>
+                                </StackPanel>
+                            </Button>
+
+                            <Button Grid.Row="7" Width="200" Margin="0,5,0,0" Grid.Column="3" Grid.ColumnSpan="2" Name="btnSaveAndCloseTimeentry_4" 
+
+Click="btnSaveAndCloseTimeentry_Click" IsDefault="False">
+                                <StackPanel Orientation="Horizontal">
+                                    <Image Width="16" Name="btnSaveAndCloseImage_4" Margin="0,0,5,0" Source="/QuickTimeEntry;component/Images/16x16neu/Speichern_Schließen.png" />
+                                    <TextBlock Text="{Resx btnSaveAndCloseTimeentry_TextBlock}"></TextBlock>
+                                </StackPanel>
+                            </Button>
+
+                            <Button Grid.Row="7" Width="100" Margin="0,5,0,0" Grid.Column="5" Grid.ColumnSpan="1" Name="btnCancelTimeentry_4" Click="btnCancelTimeentry_Click">
+                                <StackPanel Orientation="Horizontal">
+                                    <Image Width="16" Name="btnCancelTimeentryImage_4" Margin="0,0,5,0" Source="/QuickTimeEntry;component/Images/16x16neu/Abbrechen.png" />
+                                    <TextBlock Text="{Resx btnCancelTimeentry_TextBlock}"></TextBlock>
+                                </StackPanel>
+                            </Button>
+
+                            <dxe:TextEdit Visibility="Hidden" Width="100" Height="20" Name="tbBeginn_4" MaskCulture="de-DE" MaskType="DateTime" Mask="HH:mm" MaskUseAsDisplayFormat="True">00:00</dxe:TextEdit>
+                            <dxe:TextEdit Visibility="Hidden" Width="100" Height="20" Name="tbEnde_4" MaskCulture="de-DE" MaskType="DateTime" Mask="HH:mm" MaskUseAsDisplayFormat="True">00:00</dxe:TextEdit>
+                        </Grid>
+
+                    </TabItem>
+                    <TabItem HorizontalAlignment="Stretch" Visibility="Collapsed" Margin="-2,0,0,0" Header="{Resx tabTE_5}" Name="tabTE_5">
+                        <Grid HorizontalAlignment="Stretch">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition MaxWidth="110" MinWidth="80" />
+                                <ColumnDefinition MaxWidth="100" MinWidth="40" />
+                                <ColumnDefinition MaxWidth="110" MinWidth="110" />
+                                <ColumnDefinition MaxWidth="100" MinWidth="90" />
+                                <ColumnDefinition MaxWidth="110" MinWidth="110" />
+                                <ColumnDefinition MaxWidth="110" MinWidth="100" />
+                                <ColumnDefinition MaxWidth="100" MinWidth="100" />
+                                <ColumnDefinition MaxWidth="100" MinWidth="10" />
+                                <ColumnDefinition MaxWidth="100" MinWidth="10" />
+                                <ColumnDefinition MaxWidth="100" MinWidth="10" />
+                                <ColumnDefinition MaxWidth="100" MinWidth="10" />
+                                <ColumnDefinition MaxWidth="10" MinWidth="0" />
+                                <ColumnDefinition MaxWidth="100" MinWidth="100" />
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="26" />
+                                <RowDefinition Height="26" />
+                                <RowDefinition Height="26" />
+                                <RowDefinition Height="26" />
+                                <RowDefinition Height="26" />
+                                <RowDefinition Height="26" />
+                                <RowDefinition Height="26" />
+                                <RowDefinition Height="26" />
+                            </Grid.RowDefinitions>
+                            <Label Grid.Row="0" Grid.Column="0" Padding="5,3,0,0"  Content="{Resx Label1}"></Label>
+
+                            <Grid Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="5">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*" />
+                                    <ColumnDefinition Width="20" />
+                                    <ColumnDefinition Width="20" />
+                                </Grid.ColumnDefinitions>
+                                <dxe:ComboBoxEdit Grid.Column="0" AutoComplete="True" Width="Auto" Height="20" Name="cbTaetigkeit_5" />
+                                <Button Grid.Column="1" IsTabStop="False" Height="20" Padding="0,0,0,0" IsEnabled="True" Name="btnDeleteTaetigkeitToFavorites_5" ToolTip="{Resx btnDeleteTaetigkeitToFavorites}" Width="20" Click="btnDeleteTaetigkeitToFavorites_Click">
+                                    <Image Width="16" Name="btnAddbTaetigkeitToFavoritesDeleteImage_5" Source="/QuickTimeEntry;component/Images/16x16neu/Betreff_Löschen.png"></Image>
+                                </Button>
+                                <Button Grid.Column="2" IsTabStop="False" Height="20" Padding="0,0,0,0" IsEnabled="True" Name="btnAddTaetigkeitToFavorites_5" ToolTip="{Resx btnAddTaetigkeitToFavorites_1}" Width="20" Click="btnAddTaetigkeitToFavorites_Click">
+                                    <Image Width="16" Name="btnAddbTaetigkeitToFavoritesImage_5" Source="/QuickTimeEntry;component/Images/16x16neu/Betreff_Neu.png"></Image>
+                                </Button>
+                            </Grid>
+
+                            <Label Grid.Row="1" Grid.Column="0" Padding="5,3,0,0" Content="{Resx Label2}"></Label>
+                            <dxe:ComboBoxEdit AutoComplete="True" Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="1" Width="Auto" Height="20" Name="cbBezugEntity_5" SelectedIndexChanged="cbBezugEntity_SelectedIndexChanged" />
+
+                            <Grid Grid.Row="1" Grid.Column="2" Grid.ColumnSpan="4" >
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*" />
+                                    <ColumnDefinition Width="20" />
+                                    <ColumnDefinition Width="20" />
+                                    <ColumnDefinition Width="20" />
+                                    <ColumnDefinition Width="20" />
+                                    <ColumnDefinition Width="20" />
+                                </Grid.ColumnDefinitions>
+
+                                <dxe:ComboBoxEdit ImmediatePopup="True" FilterCondition="Contains" IncrementalFiltering="True" Grid.Column="0" Width="Auto" Height="20" Name="cbMSCRMEntity_5" GotFocus="cbMSCRMEntity_GotFocus" LostFocus="cbMSCRMEntity_LostFocus" EditValueChanged="cbMSCRMEntity_EditValueChanged" />
+                                <Image Grid.Column="1" Width="16" Name="btnMSCRMEntityInfoImage_5" Source="/QuickTimeEntry;component/Images/16x16neu/OK.png"></Image>
+                                <!--<Button Grid.Column="2" IsTabStop="False" Height="20" Padding="0,0,0,0" IsEnabled="True" Name="btAddNewEntity_5" ToolTip="Neue Entität erstellen" Width="20" Click="btAddNewEntity_Click">
+                                    <Image Width="16" Name="btAddNewEntityImage_5" Source="/QuickTimeEntry;component/Images/16x16neu/Anfrage.png"></Image>
+                                </Button>-->
+                                <Button Grid.Column="3" IsTabStop="False" Height="20" Padding="0,0,0,0" IsEnabled="True" Name="btnExtendedSearch_5" ToolTip="{Resx btnExtendedSearch}" Width="20" Click="btnExtendedSearch_Click">
+                                    <Image Width="16" Name="btnExtendedSearchImage_5" Source="/QuickTimeEntry;component/Images/16x16neu/Suchen.png"></Image>
+                                </Button>
+                                <Button Grid.Column="4" IsTabStop="False" Height="20" Padding="0,0,0,0" IsEnabled="True" Name="btnFavorites_5" ToolTip="{Resx btnFavorites_2}" Width="20" Click="btnFavorites_Click">
+                                    <Image Width="16" Name="btnFavoritesImage_5" Source="/QuickTimeEntry;component/Images/16x16neu/Favorit_Auswahl.png"></Image>
+                                </Button>
+                                <Button Grid.Column="5" IsTabStop="False" Height="20" Padding="0,0,0,0" IsEnabled="True" Name="btnAddToFavorites_5" ToolTip="{Resx btnAddToFavorites}" Width="20" Click="btnAddToFavorites_Click">
+                                    <Image Width="16" Name="btnAddToFavoritesImage_5" Source="/QuickTimeEntry;component/Images/16x16neu/Favorit_Neu.png"></Image>
+                                </Button>
+
+                            </Grid>
+
+                            <Label Grid.Row="2" Grid.Column="0" Padding="5,3,0,0" Content="{Resx Label3}"></Label>
+                            <dxe:ComboBoxEdit AutoComplete="True" Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="1" Width="Auto" Height="20" Name="cbBezugEntity2_5" SelectedIndexChanged="cbBezugEntity2_SelectedIndexChanged" />
+
+                            <Grid Grid.Row="2" Grid.Column="2" Grid.ColumnSpan="4" >
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*" />
+                                    <ColumnDefinition Width="20" />
+                                    <ColumnDefinition Width="20" />
+                                    <ColumnDefinition Width="20" />
+                                    <ColumnDefinition Width="20" />
+                                    <ColumnDefinition Width="20" />
+                                </Grid.ColumnDefinitions>
+
+                                <dxe:ComboBoxEdit ImmediatePopup="True" FilterCondition="Contains" IncrementalFiltering="True" Grid.Column="0" Width="Auto" Height="20" Name="cbMSCRMEntity2_5" GotFocus="cbMSCRMEntity_GotFocus" LostFocus="cbMSCRMEntity_LostFocus" EditValueChanged="cbMSCRMEntity2_EditValueChanged" />
+                                <Image Grid.Column="1" Width="16" Name="btnMSCRMEntityInfoImage2_5" Source="/QuickTimeEntry;component/Images/16x16neu/OK.png"></Image>
+                                <!--<Button Grid.Column="2" IsTabStop="False" Height="20" Padding="0,0,0,0" IsEnabled="True" Name="btAddNewEntity2_5" ToolTip="Neue Entität erstellen" Width="20" Click="btAddNewEntity2_Click">
+                                    <Image Width="16" Name="btAddNewEntityImage2_5" Source="/QuickTimeEntry;component/Images/16x16neu/Anfrage.png"></Image>
+                                </Button>-->
+                                <Button Grid.Column="3" IsTabStop="False" Height="20" Padding="0,0,0,0" IsEnabled="True" Name="btnExtendedSearch2_5" ToolTip="{Resx btnExtendedSearch}" Width="20" Click="btnExtendedSearch2_Click">
+                                    <Image Width="16" Name="btnExtendedSearchImage2_5" Source="/QuickTimeEntry;component/Images/16x16neu/Suchen.png"></Image>
+                                </Button>
+                                <Button Grid.Column="4" IsTabStop="False" Height="20" Padding="0,0,0,0" IsEnabled="True" Name="btnFavorites2_5" ToolTip="{Resx btnFavorites_2}" Width="20" Click="btnFavorites2_Click">
+                                    <Image Width="16" Name="btnFavoritesImage2_5" Source="/QuickTimeEntry;component/Images/16x16neu/Favorit_Auswahl.png"></Image>
+                                </Button>
+                                <Button Grid.Column="5" IsTabStop="False" Height="20" Padding="0,0,0,0" IsEnabled="True" Name="btnAddToFavorites2_5" ToolTip="{Resx btnAddToFavorites}" Width="20" Click="btnAddToFavorites2_Click">
+                                    <Image Width="16" Name="btnAddToFavoritesImage2_5" Source="/QuickTimeEntry;component/Images/16x16neu/Favorit_Neu.png"></Image>
+                                </Button>
+
+                            </Grid>
+
+                            <Label Grid.Row="3" Grid.Column="0" Padding="5,3,0,0" Content="{Resx Label4}"></Label>
+                            <dxe:DateEdit Grid.Row="3" Grid.Column="1" Width="100" Height="20" Name="deDatum_5"  />
+
+                            <Label Grid.Row="3" Grid.Column="2" Padding="5,3,0,0" Content="{Resx Label5}"></Label>
+                            <dxe:ComboBoxEdit ImmediatePopup="True" FilterCondition="Contains" IncrementalFiltering="True" Grid.Row="3" Grid.Column="3" LostFocus="cbAusgefuehrtDurch_LostFocus" Grid.ColumnSpan="3" Width="Auto" Height="20" Name="cbAusgefuehrtDurch_5" />
+
+                            <Label Grid.Row="4" Grid.Column="0" Padding="5,3,0,0" Content="{Resx Label6}"></Label>
+                            <Label Name="lblDauer_5" Grid.Row="4" Grid.Column="1" Padding="5,2,0,0">0,00</Label>
+
+                            <Label Grid.Row="4" Grid.Column="2" Padding="5,3,0,0" Content="{Resx Label7}"></Label>
+                            <dxe:ComboBoxEdit AutoComplete="True" Grid.Row="4" Grid.Column="3" Grid.ColumnSpan="3"  Width="Auto" Height="20" Name="cbAbrechnungsweise_5" />
+
+                            <Label Grid.Row="5" Grid.Column="0" Padding="5,3,0,0" Content="{Resx Label8}"></Label>
+                            <dxe:TextEdit EditValueChanged="te_Active_EditValueChanged" Grid.Row="5" Grid.Column="1" Width="100" Height="20" Name="tbZusatzzeit_5" MaskCulture="de-DE" MaskType="DateTime" Mask="HH:mm" MaskUseAsDisplayFormat="True">00:00</dxe:TextEdit>
+
+                            <Label Grid.Row="5" Grid.Column="2" Padding="5,3,0,0" Content="{Resx Label9}"></Label>
+                            <dxe:ComboBoxEdit AutoComplete="True" Grid.Row="5" Grid.Column="3" Grid.ColumnSpan="3"  Width="Auto" Height="20" Name="cbStatus_5" />
+
+                            <Label Grid.Row="6" Grid.Column="0" Padding="5,3,0,0" Content="{Resx Label10}"></Label>
+                            <Label Name="lblGesamtDauer_5" Grid.Row="6" Grid.Column="1" Padding="5,2,0,0">0.00</Label>
+
+                            <Label Grid.Row="6" Grid.Column="2" Padding="5,3,0,0" Content="{Resx Label11}"></Label>
+                            <dxe:CheckEdit Grid.Row="6" IsTabStop="False" Grid.Column="3" Margin="5,0,0,0" Name="ceFahrtkosten_5" />
+
+                            <Label Grid.Row="0"  Grid.Column="6" Padding="5,3,0,0" Content="{Resx Label12}"></Label>
+                            <TextBox TextWrapping="Wrap" AcceptsReturn="True" VerticalScrollBarVisibility="Visible" Grid.RowSpan="4" Name="teBeschreibung_5" Padding="0,0,0,0" Grid.Row="0" Grid.Column="7" Grid.ColumnSpan="4" Width="Auto" Height="Auto" />
+
+                            <Label Grid.Row="4" Grid.Column="6" Padding="5,3,0,0" Content="{Resx Label13}"></Label>
+                            <TextBox TextWrapping="Wrap" AcceptsReturn="True" VerticalScrollBarVisibility="Visible" Grid.RowSpan="4" Name="teAnmerkung_5" Grid.Row="4" Grid.Column="7" Grid.ColumnSpan="4" Width="Auto" Height="Auto" />
+
+                            <Button Grid.Row="0" Grid.Column="12" Grid.RowSpan="3" Height="Auto" IsEnabled="False" Margin="0,0,0,0" Name="btnTimerCtrl_5" Width="Auto" 
+
+Click="btnTimerCtrl_Click">
+                                <Image Width="40" Name="btnTimerCtrlImage_5" Source="/QuickTimeEntry;component/Images/media_play.png"></Image>
+                            </Button>
+                            <Label Grid.Row="4" Grid.Column="12" Padding="20,2,0,0" FontSize="15" Name="lblTimerCtrlInfo_5">00:00:00</Label>
+                            <Button Grid.Row="6" Width="90" Margin="0,0,0,0" Height="23" Grid.Column="12" Grid.ColumnSpan="1" Padding="0,0,0,0" Name="btnShowQuickTimeentryList_5" 
+
+ToolTip="{Resx btnShowQuickTimeentryList}" Click="btnShowQuickTimeentryList_Click">
+                                <StackPanel Orientation="Horizontal">
+                                    <Image Width="16" Name="ShowQuickTimeentryListImage_5" Margin="0,0,5,0" Source="/QuickTimeEntry;component/Images/16x16neu/Gestoppte_Zeiten_Anzeigen.png" />
+                                    <TextBlock Text="{Resx btnShowQuickTimeentryList_TextBlock}"></TextBlock>
+                                </StackPanel>
+                            </Button>
+
+                            <Button Grid.Row="7" Width="110" Margin="0,5,0,0" Grid.Column="0" Grid.ColumnSpan="1" Name="btnSaveTimeentry_5" Click="btnSaveTimeentry_Click" 
+
+IsDefault="False">
+                                <StackPanel Orientation="Horizontal">
+                                    <Image Width="16" Name="btnSaveTimeEntryImage_5" Margin="0,0,5,0" Source="/QuickTimeEntry;component/Images/16x16neu/Speichern.png" />
+                                    <TextBlock Text="{Resx btnSaveTimeentry_TextBlock}"></TextBlock>
+                                </StackPanel>
+                            </Button>
+
+                            <Button Grid.Row="7" Width="200" Margin="0,5,0,0" Grid.Column="1" Grid.ColumnSpan="2" Name="btnSaveAndNewTimeentry_5" Click="btnSaveAndNewTimeentry_Click" IsDefault="False">
+                                <StackPanel Orientation="Horizontal">
+                                    <Image Width="16" Name="btnSaveAndNewImage_5" Margin="0,0,5,0" Source="/QuickTimeEntry;component/Images/16x16neu/Speichern_Neu.png" />
+                                    <TextBlock Text="{Resx btnSaveAndNewTimeentry_TextBlock}"></TextBlock>
+                                </StackPanel>
+                            </Button>
+
+                            <Button Grid.Row="7" Width="200" Margin="0,5,0,0" Grid.Column="3" Grid.ColumnSpan="2" Name="btnSaveAndCloseTimeentry_5" 
+
+Click="btnSaveAndCloseTimeentry_Click" IsDefault="False">
+                                <StackPanel Orientation="Horizontal">
+                                    <Image Width="16" Name="btnSaveAndCloseImage_5" Margin="0,0,5,0" Source="/QuickTimeEntry;component/Images/16x16neu/Speichern_Schließen.png" />
+                                    <TextBlock Text="{Resx btnSaveAndCloseTimeentry_TextBlock}"></TextBlock>
+                                </StackPanel>
+                            </Button>
+
+                            <Button Grid.Row="7" Width="100" Margin="0,5,0,0" Grid.Column="5" Grid.ColumnSpan="1" Name="btnCancelTimeentry_5" 
+
+Click="btnCancelTimeentry_Click">
+                                <StackPanel Orientation="Horizontal">
+                                    <Image Width="16" Name="btnCancelTimeentryImage_5" Margin="0,0,5,0" Source="/QuickTimeEntry;component/Images/16x16neu/Abbrechen.png" />
+                                    <TextBlock Text="{Resx btnCancelTimeentry_TextBlock}"></TextBlock>
+                                </StackPanel>
+                            </Button>
+
+                            <dxe:TextEdit Visibility="Hidden" Width="100" Height="20" Name="tbBeginn_5" MaskCulture="de-DE" MaskType="DateTime" Mask="HH:mm" MaskUseAsDisplayFormat="True">00:00</dxe:TextEdit>
+                            <dxe:TextEdit Visibility="Hidden" Width="100" Height="20" Name="tbEnde_5" MaskCulture="de-DE" MaskType="DateTime" Mask="HH:mm" MaskUseAsDisplayFormat="True">00:00</dxe:TextEdit>
+                        </Grid>
+
+                    </TabItem>
+
+                </TabControl>
+            </Grid>
+        </ContentControl>
+
+    </DockPanel>
+
+</Window>

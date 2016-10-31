@@ -1,0 +1,110 @@
+﻿<Window x:Class="QuickTimeEntry.CreateNewReleaseEntity"
+        xmlns:dxg="http://schemas.devexpress.com/winfx/2008/xaml/grid"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:dx="http://schemas.devexpress.com/winfx/2008/xaml/core"
+        Title="Neue Release-Entität (REL) erstellen" Height="500" Width="600" xmlns:dxe="http://schemas.devexpress.com/winfx/2008/xaml/editors" ResizeMode="NoResize" ShowInTaskbar="False" Topmost="True" WindowStartupLocation="CenterOwner" WindowStyle="ToolWindow">
+    <!--<Grid dx:ThemeManager.ThemeName="Office2010Silver" Width="Auto" Height="Auto" Margin="5,5,5,5">
+        <Grid>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="110" />
+                    <ColumnDefinition />
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="25" />
+                    <RowDefinition Height="25" />
+                    <RowDefinition Height="25" />
+                    <RowDefinition Height="25" />
+                    <RowDefinition Height="25" />
+                    <RowDefinition Height="25" />
+                    <RowDefinition Height="25" />
+                    <RowDefinition Height="25" />
+                    <RowDefinition />
+                    <RowDefinition Height="40" />
+                </Grid.RowDefinitions>
+                <Label Foreground="Red" Name="label1" Grid.Column="0" Grid.Row="0" Padding="5,5,0,0" Content="Produkt | AddOn" />
+                <Label Foreground="Red" Name="label2" Grid.Column="0" Grid.Row="1" Padding="5,5,0,0" Content="Versionsnumer" />
+                <Label Foreground="Red" Name="label22" Grid.Column="0" Grid.Row="2" Padding="5,5,0,0" Content="Versionsname" />
+                <Label Foreground="Red" Name="label3" Grid.Column="0" Grid.Row="3" Padding="5,5,0,0" Content="Sprache" />
+                <Label Foreground="Red" Name="label4" Grid.Column="0" Grid.Row="4" Padding="5,5,0,0" Content="Entwickler" />
+                <Label Name="label5" Grid.Column="0" Grid.Row="5" Padding="5,5,0,0" Content="Release-Datum" />
+                <Label Name="label6" Grid.Column="0" Grid.Row="6" Padding="5,5,0,0" Content="Statusgrund" />
+                <Label Foreground="Red" Name="label7" Grid.Column="0" Grid.Row="7" Padding="5,5,0,0" Content="Produktmanager" />
+                <Label Name="label8" Grid.Column="0" Grid.Row="8" Padding="5,5,0,0" Content="Releasenotes" />
+                <TextBox TextWrapping="Wrap" AcceptsReturn="True" VerticalScrollBarVisibility="Visible"  Name="teReleasenotes" Grid.Row="8" Grid.Column="1" Grid.ColumnSpan="4" Width="Auto" Height="Auto" />
+                <Grid Grid.Row="0" Grid.Column="1">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition />
+                        <ColumnDefinition Width="20" />
+                    </Grid.ColumnDefinitions>
+                    <TextBox Name="teProdukt" Grid.Column="0" Width="Auto" Height="23" LostFocus="teProdukt_LostFocus" />
+                    <Button Grid.Column="3" IsTabStop="False" Height="20" Padding="0,0,0,0" IsEnabled="True" Name="btnSearchProdukt" ToolTip="Produkt suchen" Width="20" Click="btnSearchProdukt_Click">
+                        <Image Width="16" Name="btnImage_1" Source="/QuickTimeEntry;component/Images/16x16neu/Suchen.png"></Image>
+                    </Button>
+                </Grid>
+                <TextBox Name="teVersionsnummer" Grid.Column="1" Grid.Row="1" Width="Auto" Height="23" />
+                <TextBox Name="teVersionsname" Grid.Column="1" Grid.Row="2" Width="Auto" Height="23" />
+                <dxe:ComboBoxEdit Grid.Column="1" AutoComplete="True" Grid.Row="3" Width="Auto" Height="23" Name="cbSprache" />
+                <Grid Grid.Row="4" Grid.Column="1">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition />
+                        <ColumnDefinition Width="20" />
+                    </Grid.ColumnDefinitions>
+                    <TextBox Name="teEntwickler" Grid.Column="0" Width="Auto" Height="23" LostFocus="teEntwickler_LostFocus" />
+                    <Button Grid.Column="3" IsTabStop="False" Height="23" Padding="0,0,0,0" IsEnabled="True" Name="btnSearchEntwickler" ToolTip="User suchen" Width="20" Click="btnSearchEntwickler_Click">
+                        <Image Width="16" Name="btnImage_2" Source="/QuickTimeEntry;component/Images/16x16neu/Suchen.png"></Image>
+                    </Button>
+                </Grid>
+                <DatePicker Grid.Row="5" Grid.Column="1" Name="dpReleaseDatum" Height="23" />
+                <dxe:ComboBoxEdit Grid.Column="1" AutoComplete="True" Grid.Row="6" Width="Auto" Height="23" Name="cbStatusgrund" />
+                <Grid Grid.Row="7" Grid.Column="1">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition />
+                        <ColumnDefinition Width="20" />
+                    </Grid.ColumnDefinitions>
+                    <TextBox Name="teProduktmanager" Grid.Column="0" Width="Auto" Height="23" LostFocus="teProduktmanager_LostFocus" />
+                    <Button Grid.Column="3" IsTabStop="False" Height="20" Padding="0,0,0,0" IsEnabled="True" Name="btnSearchProduktmanager" ToolTip="User suchen" Width="20" Click="btnSearchProduktmanager_Click">
+                        <Image Width="16" Name="btnImage_3" Source="/QuickTimeEntry;component/Images/16x16neu/Suchen.png"></Image>
+                    </Button>
+                </Grid>
+
+                <Grid Grid.ColumnSpan="2" Grid.Row="9">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="170" />
+                        <ColumnDefinition Width="150" />
+                        <ColumnDefinition Width="115" />
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions >
+                        <RowDefinition Height="45" />
+                    </Grid.RowDefinitions>
+                    <Label Name="labelInfo" Grid.Column="0" Padding="5,5,0,0" Content="" />
+                    <Button Margin="5,0,5,5" Grid.Column="1" Height="23" Name="btnStoreTemplate" IsEnabled="False" Width="160" Click="btnStoreTemplate_Click">
+                        <StackPanel Orientation="Horizontal">
+                            <Image Width="16" Name="btnStoreTemplateImage" Margin="0,0,5,0" Source="/QuickTimeEntry;component/Images/16x16neu/Speichern.png" />
+                            <TextBlock>Als Vorlage speichern</TextBlock>
+                        </StackPanel>
+                    </Button>
+                    <Button Margin="5,0,5,5" Grid.Column="2" Height="23" Name="btnAccept" Width="140" Click="btnAccept_Click">
+                        <StackPanel Orientation="Horizontal">
+                            <Image Width="16" Name="btnAcceptImage" Margin="0,0,5,0" Source="/QuickTimeEntry;component/Images/16x16neu/Speichern.png" />
+                            <TextBlock>Release speichern</TextBlock>
+                        </StackPanel>
+                    </Button>
+                    <Button Margin="5,0,5,5" Grid.Column="3" Height="23" Name="btnClose" Width="105" Click="btnClose_Click">
+                        <StackPanel Orientation="Horizontal">
+                            <Image Width="16" Name="btnCloseImage" Margin="0,0,5,0" Source="/QuickTimeEntry;component/Images/16x16neu/Abbrechen.png" />
+                            <TextBlock>Abbrechen</TextBlock>
+                        </StackPanel>
+                    </Button>
+                </Grid>
+            </Grid>
+            
+        </Grid>
+
+
+
+
+    </Grid>-->
+</Window>

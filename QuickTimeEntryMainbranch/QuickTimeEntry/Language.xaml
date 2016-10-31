@@ -1,0 +1,22 @@
+﻿<Window x:Class="QuickTimeEntry.Language"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:QuickTimeEntry"
+        mc:Ignorable="d"
+        WindowStartupLocation="CenterScreen"
+        ResizeMode="NoResize"
+        Icon="/QuickTimeEntry;component/QTE.ico"
+  		ResxExtension.DefaultResxName="QuickTimeEntry.Language" Language="{UICulture}"
+        Title="{Resx Title}" Height="300" Width="300">
+    <Grid>
+        <Label Margin="62,40,0,0" Content="{Resx Label1}"></Label>
+        <RadioButton x:Name="radioButton1" Content="{Resx radioButton1}" HorizontalAlignment="Left" Margin="79,87,0,0" VerticalAlignment="Top"/>
+        <RadioButton x:Name="radioButton2" Content="{Resx radioButton2}" HorizontalAlignment="Left" Margin="79,132,0,0" VerticalAlignment="Top"/>
+        <StackPanel Orientation="Horizontal" Margin="52,202,0,0">
+            <Button x:Name="Ok_button" Content="{Resx Ok_button}" HorizontalAlignment="Left"  VerticalAlignment="Top" Width="75" Click="Ok_button_Click"/>
+            <Button x:Name="Cancel_button" Content="{Resx Cancel_button}" Margin="15,0" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Click="Cancel_button_Click" />
+        </StackPanel>
+    </Grid>
+</Window>

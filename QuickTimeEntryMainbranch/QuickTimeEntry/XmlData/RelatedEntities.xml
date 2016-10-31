@@ -1,0 +1,13 @@
+<?xml version="1.0" standalone="yes"?>
+<Settings>
+<RelatedEntities>
+<RelatedEntity name="opportunity">
+<CrmEntityName>opportunity</CrmEntityName>
+<Shortcut lang_1031="VC" lang_1033="OPP" />
+</RelatedEntity>
+<RelatedEntity name="workpackage">
+<CrmEntityName>a24_workpackage</CrmEntityName>
+<Shortcut lang_1031="AP" lang_1033="WP" />
+</RelatedEntity>
+</RelatedEntities>
+</Settings>

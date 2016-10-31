@@ -1,0 +1,600 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{78708E17-A7B8-4C1B-B328-2CA43599FFEF}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>QuickTimeEntry</RootNamespace>
+    <AssemblyName>QuickTimeEntry</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>QuickTimeEntry.App</StartupObject>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>QTE.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <CodeAnalysisLogFile>bin\Debug\QuickTimeEntry.exe.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;D:\Programme\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisRuleDirectories>;D:\Programme\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|AnyCPU'">
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <CodeAnalysisLogFile>bin\Release\QuickTimeEntry.exe.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;D:\Programme\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisRuleDirectories>;D:\Programme\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.Data.v16.1, Version=16.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\DLLs\DevExpress.Data.v16.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Mvvm.v16.1, Version=16.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\DLLs\DevExpress.Mvvm.v16.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Printing.v15.1.Core, Version=15.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Data.v15.1, Version=15.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Mvvm.v15.1, Version=15.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Printing.v16.1.Core, Version=16.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\DLLs\DevExpress.Printing.v16.1.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Xpf.Core.v15.1, Version=15.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Xpf.Core.v16.1, Version=16.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\DLLs\DevExpress.Xpf.Core.v16.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Xpf.Docking.v15.1, Version=15.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Xpf.Docking.v16.1, Version=16.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\DLLs\DevExpress.Xpf.Docking.v16.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Xpf.Grid.v15.1, Version=15.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Xpf.Grid.v15.1.Core, Version=15.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Xpf.Grid.v16.1, Version=16.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\DLLs\DevExpress.Xpf.Grid.v16.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Xpf.Grid.v16.1.Core, Version=16.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\DLLs\DevExpress.Xpf.Grid.v16.1.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Xpf.LayoutControl.v15.1, Version=15.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Xpf.LayoutControl.v16.1, Version=16.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\DLLs\DevExpress.Xpf.LayoutControl.v16.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Xpf.NavBar.v15.1, Version=15.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Xpf.NavBar.v16.1, Version=16.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\DLLs\DevExpress.Xpf.NavBar.v16.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Xpf.Printing.v15.1, Version=15.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Xpf.Printing.v16.1, Version=16.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\DLLs\DevExpress.Xpf.Printing.v16.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Xpf.Ribbon.v15.1, Version=15.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.Xpf.Ribbon.v16.1, Version=16.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\DLLs\DevExpress.Xpf.Ribbon.v16.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Xpf.Themes.Office2010Silver.v15.1, Version=15.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Xpf.Themes.Office2010Silver.v16.1, Version=16.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\DLLs\DevExpress.Xpf.Themes.Office2010Silver.v16.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Xpf.Themes.Office2016White.v16.1, Version=16.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\DLLs\DevExpress.Xpf.Themes.Office2016White.v16.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraEditors.v15.1, Version=15.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraEditors.v16.1, Version=16.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\DLLs\DevExpress.XtraEditors.v16.1.dll</HintPath>
+    </Reference>
+    <Reference Include="Infralution.Localization.Wpf">
+      <HintPath>Library\Localization\Infralution.Localization.Wpf.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Crm.Sdk.Proxy">
+      <HintPath>Library\Microsoft\Crm\7\7.1.1\Microsoft.Crm.Sdk.Proxy.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Xrm.Client">
+      <HintPath>Library\Microsoft\Crm\7\7.1.1\Microsoft.Xrm.Client.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Xrm.Sdk, Version=6.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Library\Microsoft\Crm\7\7.1.1\Microsoft.Xrm.Sdk.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="UIAutomationProvider" />
+    <Reference Include="UIAutomationTypes" />
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="Constants.cs" />
+    <Compile Include="CopyTimeEntry.xaml.cs">
+      <DependentUpon>CopyTimeEntry.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="CreateNewIncidentEntity.xaml.cs">
+      <DependentUpon>CreateNewIncidentEntity.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="CreateNewReleaseEntity.xaml.cs">
+      <DependentUpon>CreateNewReleaseEntity.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="CRMManager.cs" />
+    <Compile Include="EditTimeSpanItems.xaml.cs">
+      <DependentUpon>EditTimeSpanItems.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Language.xaml.cs">
+      <DependentUpon>Language.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Xrm\entities.cs" />
+    <Compile Include="GroupColumnSummaryForegroundConverter.cs" />
+    <Compile Include="PicklistManager.cs" />
+    <Compile Include="EntitySearch.xaml.cs">
+      <DependentUpon>EntitySearch.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ProcessUserInfo.cs" />
+    <Compile Include="SelectFavorite.xaml.cs">
+      <DependentUpon>SelectFavorite.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="SelectMSCRMEntity.xaml.cs">
+      <DependentUpon>SelectMSCRMEntity.xaml</DependentUpon>
+    </Compile>
+    <Page Include="CopyTimeEntry.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="CreateNewIncidentEntity.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="CreateNewReleaseEntity.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="EditTimeSpanItems.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Language.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="QuickTimeEntry.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="QuickTimeEntry.xaml.cs">
+      <DependentUpon>QuickTimeEntry.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Page Include="EntitySearch.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="SelectFavorite.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="SelectMSCRMEntity.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="EditTimeSpanItems.de.resx" />
+    <EmbeddedResource Include="EntitySearch.de.resx" />
+    <EmbeddedResource Include="EntitySearch.resx" />
+    <EmbeddedResource Include="EditTimeSpanItems.resx">
+      <LastGenOutput>EditTimeSpanItems.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CopyTimeEntry.resx" />
+    <EmbeddedResource Include="CopyTimeEntry.de.resx">
+      <LastGenOutput>CopyTimeEntry.de.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Language.de.resx">
+      <LastGenOutput>QuickTimeEntry.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Language.resx">
+      <LastGenOutput>QuickTimeEntry.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SelectFavorite.de.resx" />
+    <EmbeddedResource Include="SelectMSCRMEntity.de.resx" />
+    <EmbeddedResource Include="SelectMSCRMEntity.resx" />
+    <EmbeddedResource Include="SelectFavorite.resx" />
+    <EmbeddedResource Include="QuickTimeEntry.resx">
+      <LastGenOutput>QuickTimeEntry.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QuickTimeEntry.de.resx">
+      <LastGenOutput>QuickTimeEntry.de.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <None Include="app.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <AppDesigner Include="Properties\" />
+    <None Include="Xrm\CreateEarlyBound.bat" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\media_play.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\stop.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Resources\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\16x16\add2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\16x16\edit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\16x16\delete2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\clock_background.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="window_time.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0,Profile=Client">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 Client Profile %28x86 und x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferences Include="Web References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\16x16\document_exchange.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\16x16\window.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\16x16\check.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\16x16\delete.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\16x16\window_view.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\16x16\bookmark_add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\16x16\folder_ok.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\16x16\disk_blue.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\16x16\disk_blue_error.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\16x16\error.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\16x16\view.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\16x16\help2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\16x16\bookmark_delete.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\16x16\data_time.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\16x16\data_delete.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\16x16\data_refresh.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\16x16\gear_stop.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\16x16\gear_run.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\16x16\information.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\16x16\document_plain_new.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\16x16\disk_blue_window.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\16x16\folder.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\16x16\folder_closed.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\16x16\branch_add.png" />
+    <Resource Include="Images\16x16\branch_delete.png" />
+    <Resource Include="Images\16x16\calendar_down.png" />
+    <Resource Include="Images\16x16\calendar_preferences.png" />
+    <Resource Include="Images\16x16\data_green.png" />
+    <Resource Include="Images\16x16\data_red.png" />
+    <Resource Include="Images\16x16\data_replace.png" />
+    <Resource Include="Images\16x16\history_add.png" />
+    <Resource Include="Images\16x16\history_delete.png" />
+    <Resource Include="Images\16x16\history_edit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\32x32\branch_add.png" />
+    <Resource Include="Images\32x32\branch_delete.png" />
+    <Resource Include="Images\32x32\calendar_down.png" />
+    <Resource Include="Images\32x32\calendar_preferences.png" />
+    <Resource Include="Images\32x32\data_green.png" />
+    <Resource Include="Images\32x32\data_red.png" />
+    <Resource Include="Images\32x32\data_replace.png" />
+    <Resource Include="Images\32x32\history_add.png" />
+    <Resource Include="Images\32x32\history_delete.png" />
+    <Resource Include="Images\32x32\history_edit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\32x32\history.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\16x16\clipboard.png" />
+    <Resource Include="Images\16x16\help.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\32x32\clipboard.png" />
+    <Resource Include="Images\32x32\help.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="stopwatch.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\16x16\clipboard_add_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\32x32\clipboard_add_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="XmlData\info.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="QTE.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\16x16neu\Abbrechen.png" />
+    <Resource Include="Images\16x16neu\Anfrage.png" />
+    <Resource Include="Images\16x16neu\Betreff.png" />
+    <Resource Include="Images\16x16neu\Betreff_Löschen.png" />
+    <Resource Include="Images\16x16neu\Betreff_Neu.png" />
+    <Resource Include="Images\16x16neu\Favorit.png" />
+    <Resource Include="Images\16x16neu\Favorit_Auswahl.png" />
+    <Resource Include="Images\16x16neu\Favorit_Neu.png" />
+    <Resource Include="Images\16x16neu\Gestoppte_Zeiten_Anzeigen.png" />
+    <Resource Include="Images\16x16neu\Löschen.png" />
+    <Resource Include="Images\16x16neu\Speichern.png" />
+    <Resource Include="Images\16x16neu\Speichern_Neu.png" />
+    <Resource Include="Images\16x16neu\Speichern_Schließen.png" />
+    <Resource Include="Images\16x16neu\Suchen.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\16x16neu\NOK.png" />
+    <Resource Include="Images\16x16neu\OK.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\16x16\server_network.png" />
+    <Resource Include="Images\32x32\server_network.png" />
+    <Content Include="Library\Localization\Infralution.Localization.Wpf.dll" />
+    <Content Include="Library\Microsoft\Crm\7\7.1.1\Microsoft.Xrm.Sdk.dll" />
+    <Content Include="XmlData\RelatedEntities.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Xrm\CrmSvcUtil.exe" />
+    <Content Include="Xrm\Microsoft.Xrm.Sdk.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="ConnectionProjects\McTools.Xrm.Connection.WpfForms\McTools.Xrm.Connection.WpfForms.csproj">
+      <Project>{15269013-3417-40d0-a0e9-9c2804def18d}</Project>
+      <Name>McTools.Xrm.Connection.WpfForms</Name>
+    </ProjectReference>
+    <ProjectReference Include="ConnectionProjects\McTools.Xrm.Connection\McTools.Xrm.Connection.csproj">
+      <Project>{c3824c2c-6e2e-4fde-a2aa-229bbc7c3b1f}</Project>
+      <Name>McTools.Xrm.Connection</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

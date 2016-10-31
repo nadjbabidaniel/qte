@@ -1,0 +1,7 @@
+C:\Users\PC29\Desktop\QuickTimeEntry\QuickTimeEntryMainbranch\QuickTimeEntry\ConnectionProjects\McTools.Xrm.Connection\bin\Debug\McTools.Xrm.Connection.dll
+C:\Users\PC29\Desktop\QuickTimeEntry\QuickTimeEntryMainbranch\QuickTimeEntry\ConnectionProjects\McTools.Xrm.Connection\bin\Debug\McTools.Xrm.Connection.pdb
+C:\Users\PC29\Desktop\QuickTimeEntry\QuickTimeEntryMainbranch\QuickTimeEntry\ConnectionProjects\McTools.Xrm.Connection\bin\Debug\Microsoft.Crm.Sdk.Proxy.dll
+C:\Users\PC29\Desktop\QuickTimeEntry\QuickTimeEntryMainbranch\QuickTimeEntry\ConnectionProjects\McTools.Xrm.Connection\bin\Debug\Microsoft.Xrm.Client.dll
+C:\Users\PC29\Desktop\QuickTimeEntry\QuickTimeEntryMainbranch\QuickTimeEntry\ConnectionProjects\McTools.Xrm.Connection\bin\Debug\Microsoft.Xrm.Sdk.dll
+C:\Users\PC29\Desktop\QuickTimeEntry\QuickTimeEntryMainbranch\QuickTimeEntry\ConnectionProjects\McTools.Xrm.Connection\obj\Debug\McTools.Xrm.Connection.dll
+C:\Users\PC29\Desktop\QuickTimeEntry\QuickTimeEntryMainbranch\QuickTimeEntry\ConnectionProjects\McTools.Xrm.Connection\obj\Debug\McTools.Xrm.Connection.pdb

@@ -1,0 +1,869 @@
+<?xml version="1.0" standalone="yes"?>
+<CacheEntries>
+  <item>
+    <id>00000000-0000-0000-0000-0000000</id>
+    <type />
+    <subtype />
+    <mscrmid />
+    <mscrmparentid />
+    <description />
+    <zusatzinfo1 />
+    <zusatzinfo2 />
+  </item>
+  <item>
+    <id>f19201d7-1649-4109-82e0-18b2dea34947</id>
+    <type>SETTING__a24xrmdomain_comdata</type>
+    <subtype>CURRENT_MSCRM_USER</subtype>
+    <mscrmid />
+    <mscrmparentid />
+    <description />
+    <zusatzinfo1>Com Data</zusatzinfo1>
+    <zusatzinfo2>4527c255-b521-e611-80cb-00155d10671e</zusatzinfo2>
+  </item>
+  <item>
+    <id>e7642b73-1a8b-463c-98f8-5c19887ccd58</id>
+    <type>WORKPACKAGE</type>
+    <subtype>0</subtype>
+    <mscrmid>4e170437-ae30-e611-80cb-00155d10671e</mscrmid>
+    <mscrmparentid>00000000-0000-0000-0000-000000000000</mscrmparentid>
+    <description>Demo | - | -</description>
+    <zusatzinfo1>1/1/0001 12:00 AM</zusatzinfo1>
+    <zusatzinfo2 />
+  </item>
+  <item>
+    <id>7369145a-e1c8-44ad-b16e-36fd17b8c02c</id>
+    <type>WORKPACKAGE</type>
+    <subtype>0</subtype>
+    <mscrmid>7e7071c8-8738-e611-80cb-00155d10671e</mscrmid>
+    <mscrmparentid>00000000-0000-0000-0000-000000000000</mscrmparentid>
+    <description>Setup</description>
+    <zusatzinfo1>1/1/0001 12:00 AM</zusatzinfo1>
+    <zusatzinfo2 />
+  </item>
+  <item>
+    <id>30f5764a-d5cc-4eb1-b5ea-ee251953637f</id>
+    <type>WORKPACKAGE</type>
+    <subtype>0</subtype>
+    <mscrmid>dcc9e656-4a47-e611-80cd-00155d10671e</mscrmid>
+    <mscrmparentid>00000000-0000-0000-0000-000000000000</mscrmparentid>
+    <description>Datenbank berietstelen</description>
+    <zusatzinfo1>1/1/0001 12:00 AM</zusatzinfo1>
+    <zusatzinfo2 />
+  </item>
+  <item>
+    <id>cff6e0e7-24d6-4637-8108-e82ff666eec0</id>
+    <type>WORKPACKAGE</type>
+    <subtype>0</subtype>
+    <mscrmid>365fe669-bd50-e611-80cd-00155d10671e</mscrmid>
+    <mscrmparentid>00000000-0000-0000-0000-000000000000</mscrmparentid>
+    <description>TEST</description>
+    <zusatzinfo1>1/1/0001 12:00 AM</zusatzinfo1>
+    <zusatzinfo2 />
+  </item>
+  <item>
+    <id>be5a8208-e7f9-4724-9fdf-761c54017b78</id>
+    <type>WORKPACKAGE</type>
+    <subtype>0</subtype>
+    <mscrmid>febdbfe9-bb58-e611-80cd-00155d10671e</mscrmid>
+    <mscrmparentid>00000000-0000-0000-0000-000000000000</mscrmparentid>
+    <description>Demo Partial Order</description>
+    <zusatzinfo1>1/1/0001 12:00 AM</zusatzinfo1>
+    <zusatzinfo2 />
+  </item>
+  <item>
+    <id>83bb0a13-5158-4b0f-8530-97504c99c353</id>
+    <type>WORKPACKAGE</type>
+    <subtype>0</subtype>
+    <mscrmid>e28eec8f-a86e-e611-80d0-00155d10673a</mscrmid>
+    <mscrmparentid>00000000-0000-0000-0000-000000000000</mscrmparentid>
+    <description>Teil 1</description>
+    <zusatzinfo1>1/1/0001 12:00 AM</zusatzinfo1>
+    <zusatzinfo2 />
+  </item>
+  <item>
+    <id>ee8fcc02-4afe-4ee6-878e-3b79e3c02a46</id>
+    <type>WORKPACKAGE</type>
+    <subtype>0</subtype>
+    <mscrmid>19e9f8ef-ae6e-e611-80d0-00155d10673a</mscrmid>
+    <mscrmparentid>00000000-0000-0000-0000-000000000000</mscrmparentid>
+    <description> | xcvyxcvyxc </description>
+    <zusatzinfo1>1/1/0001 12:00 AM</zusatzinfo1>
+    <zusatzinfo2 />
+  </item>
+  <item>
+    <id>4fd840f1-5eb7-4a36-acb2-642f2a14a02f</id>
+    <type>WORKPACKAGE</type>
+    <subtype>0</subtype>
+    <mscrmid>3f6483c1-3370-e611-80d1-00155d10673a</mscrmid>
+    <mscrmparentid>00000000-0000-0000-0000-000000000000</mscrmparentid>
+    <description>TEST</description>
+    <zusatzinfo1>1/1/0001 12:00 AM</zusatzinfo1>
+    <zusatzinfo2 />
+  </item>
+  <item>
+    <id>31db2223-e6cf-46d5-b733-4774be5f9bb4</id>
+    <type>WORKPACKAGE</type>
+    <subtype>0</subtype>
+    <mscrmid>5054f6ca-d970-e611-80d1-00155d10673a</mscrmid>
+    <mscrmparentid>00000000-0000-0000-0000-000000000000</mscrmparentid>
+    <description>sdfdfdsfsdfsdf</description>
+    <zusatzinfo1>1/1/0001 12:00 AM</zusatzinfo1>
+    <zusatzinfo2 />
+  </item>
+  <item>
+    <id>9c18cf9e-1c4e-4f84-88f5-e8744d67d3db</id>
+    <type>WORKPACKAGE</type>
+    <subtype>0</subtype>
+    <mscrmid>09a87eb5-9e75-e611-80d1-00155d10673a</mscrmid>
+    <mscrmparentid>00000000-0000-0000-0000-000000000000</mscrmparentid>
+    <description>asdfasdf</description>
+    <zusatzinfo1>1/1/0001 12:00 AM</zusatzinfo1>
+    <zusatzinfo2 />
+  </item>
+  <item>
+    <id>63fd1ec0-6d53-4c14-a9da-d2a297a98f2c</id>
+    <type>WORKPACKAGE</type>
+    <subtype>0</subtype>
+    <mscrmid>5d70addb-8f76-e611-80d1-00155d10673a</mscrmid>
+    <mscrmparentid>00000000-0000-0000-0000-000000000000</mscrmparentid>
+    <description>Consulting</description>
+    <zusatzinfo1>1/1/0001 12:00 AM</zusatzinfo1>
+    <zusatzinfo2 />
+  </item>
+  <item>
+    <id>0b45588e-f5aa-419a-af17-44972d5498d7</id>
+    <type>WORKPACKAGE</type>
+    <subtype>0</subtype>
+    <mscrmid>0b929395-757a-e611-80d1-00155d10673a</mscrmid>
+    <mscrmparentid>00000000-0000-0000-0000-000000000000</mscrmparentid>
+    <description>Anywhere 24 | TEST </description>
+    <zusatzinfo1>1/1/0001 12:00 AM</zusatzinfo1>
+    <zusatzinfo2 />
+  </item>
+  <item>
+    <id>516dd02d-cca5-4e1e-b02a-0f08af85596f</id>
+    <type>WORKPACKAGE</type>
+    <subtype>0</subtype>
+    <mscrmid>5416f5cb-767a-e611-80d1-00155d10673a</mscrmid>
+    <mscrmparentid>00000000-0000-0000-0000-000000000000</mscrmparentid>
+    <description>Adventure Works (sample) | asdfasdfasdfasdf </description>
+    <zusatzinfo1>1/1/0001 12:00 AM</zusatzinfo1>
+    <zusatzinfo2 />
+  </item>
+  <item>
+    <id>93b32524-f866-4565-b75e-fd064961fc34</id>
+    <type>WORKPACKAGE</type>
+    <subtype>0</subtype>
+    <mscrmid>6813cca1-777a-e611-80d1-00155d10673a</mscrmid>
+    <mscrmparentid>00000000-0000-0000-0000-000000000000</mscrmparentid>
+    <description>Blue Yonder Airlines (sample) | asdfasdfasdfasdf </description>
+    <zusatzinfo1>1/1/0001 12:00 AM</zusatzinfo1>
+    <zusatzinfo2 />
+  </item>
+  <item>
+    <id>50dfdf1f-07bd-4947-87ec-838e52e7bc5a</id>
+    <type>WORKPACKAGE</type>
+    <subtype>0</subtype>
+    <mscrmid>b8897e6a-1686-e611-80d1-00155d10673a</mscrmid>
+    <mscrmparentid>00000000-0000-0000-0000-000000000000</mscrmparentid>
+    <description>Anywhere 24 | TEST </description>
+    <zusatzinfo1>1/1/0001 12:00 AM</zusatzinfo1>
+    <zusatzinfo2 />
+  </item>
+  <item>
+    <id>6b3bff8e-2362-4cb7-9b4d-734f982329cf</id>
+    <type>OPPORTUNITY</type>
+    <subtype />
+    <mscrmid>0da2947e-fdfa-e511-80c6-00155d10671e</mscrmid>
+    <mscrmparentid>0fa2947e-fdfa-e511-80c6-00155d10671e</mscrmparentid>
+    <description>Likes our products (sample)</description>
+    <zusatzinfo1>1/1/0001 12:00 AM</zusatzinfo1>
+    <zusatzinfo2 />
+  </item>
+  <item>
+    <id>eb291f6d-b430-41bf-ae13-75b5d2a32002</id>
+    <type>OPPORTUNITY</type>
+    <subtype />
+    <mscrmid>3c5f787d-4617-e611-80cb-00155d10671e</mscrmid>
+    <mscrmparentid>dc50b11f-8c16-e611-80cb-00155d10671e</mscrmparentid>
+    <description>Test VC</description>
+    <zusatzinfo1>1/1/0001 12:00 AM</zusatzinfo1>
+    <zusatzinfo2 />
+  </item>
+  <item>
+    <id>3b9144c4-049b-486c-ab48-81a897c8dd6a</id>
+    <type>OPPORTUNITY</type>
+    <subtype />
+    <mscrmid>75b6fbf4-eb20-e611-80cb-00155d10671e</mscrmid>
+    <mscrmparentid>0fa2947e-fdfa-e511-80c6-00155d10671e</mscrmparentid>
+    <description>Demo AS</description>
+    <zusatzinfo1>1/1/0001 12:00 AM</zusatzinfo1>
+    <zusatzinfo2 />
+  </item>
+  <item>
+    <id>77329364-ca65-4cc0-8040-21e8a9b26d42</id>
+    <type>OPPORTUNITY</type>
+    <subtype />
+    <mscrmid>0974755c-ef20-e611-80cb-00155d10671e</mscrmid>
+    <mscrmparentid>0fa2947e-fdfa-e511-80c6-00155d10671e</mscrmparentid>
+    <description>E-Mail Sec | New | </description>
+    <zusatzinfo1>1/1/0001 12:00 AM</zusatzinfo1>
+    <zusatzinfo2 />
+  </item>
+  <item>
+    <id>41952874-29f3-40fc-9d1d-a04fc8428e1d</id>
+    <type>OPPORTUNITY</type>
+    <subtype />
+    <mscrmid>a2fe2a51-7c26-e611-80cb-00155d10671e</mscrmid>
+    <mscrmparentid>0fa2947e-fdfa-e511-80c6-00155d10671e</mscrmparentid>
+    <description>Consolidated Messenger | Broadcast  | kjzi </description>
+    <zusatzinfo1>1/1/0001 12:00 AM</zusatzinfo1>
+    <zusatzinfo2 />
+  </item>
+  <item>
+    <id>45dc4b5e-ff18-4534-9bb0-ba0ce7ed4973</id>
+    <type>OPPORTUNITY</type>
+    <subtype />
+    <mscrmid>3c235f37-5929-e611-80cb-00155d10671e</mscrmid>
+    <mscrmparentid>63bfdc40-7017-e611-80cb-00155d10671e</mscrmparentid>
+    <description>Demo Topic AS</description>
+    <zusatzinfo1>1/1/0001 12:00 AM</zusatzinfo1>
+    <zusatzinfo2 />
+  </item>
+  <item>
+    <id>8f6921e2-b283-4740-9a8c-66fa5ea5ffae</id>
+    <type>OPPORTUNITY</type>
+    <subtype />
+    <mscrmid>7eeb748b-b92b-e611-80cb-00155d10671e</mscrmid>
+    <mscrmparentid>3dbc47ff-b82b-e611-80cb-00155d10671e</mscrmparentid>
+    <description>Interested in SMS2Email</description>
+    <zusatzinfo1>1/1/0001 12:00 AM</zusatzinfo1>
+    <zusatzinfo2 />
+  </item>
+  <item>
+    <id>3cb24e56-74d6-418b-b55c-dc344011e43b</id>
+    <type>OPPORTUNITY</type>
+    <subtype />
+    <mscrmid>0b6d0f72-732d-e611-80cb-00155d10671e</mscrmid>
+    <mscrmparentid>09816ea0-01f8-e511-80c6-00155d10671e</mscrmparentid>
+    <description>Interested in Broadcast</description>
+    <zusatzinfo1>1/1/0001 12:00 AM</zusatzinfo1>
+    <zusatzinfo2 />
+  </item>
+  <item>
+    <id>11d5ba8a-bcef-445f-83d5-417b2afccdd9</id>
+    <type>OPPORTUNITY</type>
+    <subtype />
+    <mscrmid>88c1a0cf-132e-e611-80cb-00155d10671e</mscrmid>
+    <mscrmparentid>8ac1a0cf-132e-e611-80cb-00155d10671e</mscrmparentid>
+    <description>Interested in Everything</description>
+    <zusatzinfo1>1/1/0001 12:00 AM</zusatzinfo1>
+    <zusatzinfo2 />
+  </item>
+  <item>
+    <id>a456c004-6dd3-4f8b-b5e9-cbfb808cd550</id>
+    <type>OPPORTUNITY</type>
+    <subtype />
+    <mscrmid>1af8bd4b-7b38-e611-80cb-00155d10671e</mscrmid>
+    <mscrmparentid>6c7849e0-7538-e611-80cb-00155d10671e</mscrmparentid>
+    <description>PoC erstelen</description>
+    <zusatzinfo1>1/1/0001 12:00 AM</zusatzinfo1>
+    <zusatzinfo2 />
+  </item>
+  <item>
+    <id>a75fdbd3-6df0-410d-a84b-e96221a7f807</id>
+    <type>OPPORTUNITY</type>
+    <subtype />
+    <mscrmid>d1359c09-8d38-e611-80cb-00155d10671e</mscrmid>
+    <mscrmparentid>13816ea0-01f8-e511-80c6-00155d10671e</mscrmparentid>
+    <description>Alpine Ski House (sample) | E-Mail Security  | TEST </description>
+    <zusatzinfo1>1/1/0001 12:00 AM</zusatzinfo1>
+    <zusatzinfo2 />
+  </item>
+  <item>
+    <id>e3a4a68b-5923-4977-a881-123e03bcaee2</id>
+    <type>OPPORTUNITY</type>
+    <subtype />
+    <mscrmid>dc96c1b5-9038-e611-80cb-00155d10671e</mscrmid>
+    <mscrmparentid>13816ea0-01f8-e511-80c6-00155d10671e</mscrmparentid>
+    <description>E-Mail Security</description>
+    <zusatzinfo1>1/1/0001 12:00 AM</zusatzinfo1>
+    <zusatzinfo2 />
+  </item>
+  <item>
+    <id>33955e23-ddca-4d86-acfa-3c7a44ed20ee</id>
+    <type>OPPORTUNITY</type>
+    <subtype />
+    <mscrmid>3f58aa48-2539-e611-80cb-00155d10671e</mscrmid>
+    <mscrmparentid>0d816ea0-01f8-e511-80c6-00155d10671e</mscrmparentid>
+    <description>Blue Yonder Airllines | E-Mail Sec</description>
+    <zusatzinfo1>1/1/0001 12:00 AM</zusatzinfo1>
+    <zusatzinfo2 />
+  </item>
+  <item>
+    <id>0406360c-b456-45df-b0d9-3678a086f8c5</id>
+    <type>OPPORTUNITY</type>
+    <subtype />
+    <mscrmid>f10daf9d-2839-e611-80cb-00155d10671e</mscrmid>
+    <mscrmparentid>0d816ea0-01f8-e511-80c6-00155d10671e</mscrmparentid>
+    <description>123</description>
+    <zusatzinfo1>1/1/0001 12:00 AM</zusatzinfo1>
+    <zusatzinfo2 />
+  </item>
+  <item>
+    <id>2d45a46c-a45f-46b2-8e0e-2c1a98acd49d</id>
+    <type>OPPORTUNITY</type>
+    <subtype />
+    <mscrmid>b0da6b36-c93e-e611-80cb-00155d10671e</mscrmid>
+    <mscrmparentid>b2da6b36-c93e-e611-80cb-00155d10671e</mscrmparentid>
+    <description>Not sure what he wants</description>
+    <zusatzinfo1>1/1/0001 12:00 AM</zusatzinfo1>
+    <zusatzinfo2 />
+  </item>
+  <item>
+    <id>05ab9b7b-d8bf-4d2f-a412-618ef6ff808e</id>
+    <type>OPPORTUNITY</type>
+    <subtype />
+    <mscrmid>270b5bbf-de3e-e611-80cb-00155d10671e</mscrmid>
+    <mscrmparentid>0d816ea0-01f8-e511-80c6-00155d10671e</mscrmparentid>
+    <description>TEST TEST</description>
+    <zusatzinfo1>1/1/0001 12:00 AM</zusatzinfo1>
+    <zusatzinfo2 />
+  </item>
+  <item>
+    <id>fa2bf55c-bfd6-4fff-bc65-70e9a0067ab6</id>
+    <type>OPPORTUNITY</type>
+    <subtype />
+    <mscrmid>7c2258de-723f-e611-80cb-00155d10671e</mscrmid>
+    <mscrmparentid>0d816ea0-01f8-e511-80c6-00155d10671e</mscrmparentid>
+    <description>E-Mail Security ablöse</description>
+    <zusatzinfo1>1/1/0001 12:00 AM</zusatzinfo1>
+    <zusatzinfo2 />
+  </item>
+  <item>
+    <id>85b7d2ff-b9b3-4c60-9730-61b49e316ee5</id>
+    <type>OPPORTUNITY</type>
+    <subtype />
+    <mscrmid>39db58f7-4247-e611-80cd-00155d10671e</mscrmid>
+    <mscrmparentid>15816ea0-01f8-e511-80c6-00155d10671e</mscrmparentid>
+    <description>A. Datum Corporation (sample) | Broadcast  | 24102016 </description>
+    <zusatzinfo1>1/1/0001 12:00 AM</zusatzinfo1>
+    <zusatzinfo2 />
+  </item>
+  <item>
+    <id>27b53fb6-b3c6-4790-8cb4-cd6920854f7a</id>
+    <type>OPPORTUNITY</type>
+    <subtype />
+    <mscrmid>26022bb2-ed49-e611-80cd-00155d10671e</mscrmid>
+    <mscrmparentid>15816ea0-01f8-e511-80c6-00155d10671e</mscrmparentid>
+    <description>rzu</description>
+    <zusatzinfo1>1/1/0001 12:00 AM</zusatzinfo1>
+    <zusatzinfo2 />
+  </item>
+  <item>
+    <id>51027cb9-7011-42aa-a29e-6fcf04a8569c</id>
+    <type>OPPORTUNITY</type>
+    <subtype />
+    <mscrmid>a3936621-0a53-e611-80cd-00155d10671e</mscrmid>
+    <mscrmparentid>6461099a-5929-e611-80cb-00155d10671e</mscrmparentid>
+    <description>TEST 7687554 </description>
+    <zusatzinfo1>1/1/0001 12:00 AM</zusatzinfo1>
+    <zusatzinfo2 />
+  </item>
+  <item>
+    <id>594a2ea3-baeb-44bf-9c35-6685158e2bc7</id>
+    <type>OPPORTUNITY</type>
+    <subtype />
+    <mscrmid>cb2e4ee7-5653-e611-80cd-00155d10671e</mscrmid>
+    <mscrmparentid>15816ea0-01f8-e511-80c6-00155d10671e</mscrmparentid>
+    <description>A. Datum Corporation (sample) | E-Mail Security  | TEst </description>
+    <zusatzinfo1>1/1/0001 12:00 AM</zusatzinfo1>
+    <zusatzinfo2 />
+  </item>
+  <item>
+    <id>977cb0ef-cb12-4930-9761-448e184c8191</id>
+    <type>OPPORTUNITY</type>
+    <subtype />
+    <mscrmid>65422b70-9a6e-e611-80d0-00155d10673a</mscrmid>
+    <mscrmparentid>15816ea0-01f8-e511-80c6-00155d10671e</mscrmparentid>
+    <description>TERST</description>
+    <zusatzinfo1>1/1/0001 12:00 AM</zusatzinfo1>
+    <zusatzinfo2 />
+  </item>
+  <item>
+    <id>af88acc3-640b-4f75-9bb5-62b4b3993237</id>
+    <type>OPPORTUNITY</type>
+    <subtype />
+    <mscrmid>4b68533a-1a70-e611-80d1-00155d10673a</mscrmid>
+    <mscrmparentid>4d68533a-1a70-e611-80d1-00155d10673a</mscrmparentid>
+    <description>Dublettencheck</description>
+    <zusatzinfo1>1/1/0001 12:00 AM</zusatzinfo1>
+    <zusatzinfo2 />
+  </item>
+  <item>
+    <id>0ec7e023-4c90-4141-8b1c-0a29c4cfcf33</id>
+    <type>OPPORTUNITY</type>
+    <subtype />
+    <mscrmid>81816930-1f70-e611-80d1-00155d10673a</mscrmid>
+    <mscrmparentid>83816930-1f70-e611-80d1-00155d10673a</mscrmparentid>
+    <description>Fax2Mail Ablösung</description>
+    <zusatzinfo1>1/1/0001 12:00 AM</zusatzinfo1>
+    <zusatzinfo2 />
+  </item>
+  <item>
+    <id>2aab8abc-74a3-48df-9138-afe84ca58122</id>
+    <type>OPPORTUNITY</type>
+    <subtype />
+    <mscrmid>a6876f86-1f70-e611-80d1-00155d10673a</mscrmid>
+    <mscrmparentid>a8876f86-1f70-e611-80d1-00155d10673a</mscrmparentid>
+    <description>Test</description>
+    <zusatzinfo1>1/1/0001 12:00 AM</zusatzinfo1>
+    <zusatzinfo2 />
+  </item>
+  <item>
+    <id>9ed15bdc-4ad2-477c-98c6-40a7177caa90</id>
+    <type>OPPORTUNITY</type>
+    <subtype />
+    <mscrmid>2969ebbf-4370-e611-80d1-00155d10673a</mscrmid>
+    <mscrmparentid>83816930-1f70-e611-80d1-00155d10673a</mscrmparentid>
+    <description>Teststellung für Oppo 123</description>
+    <zusatzinfo1>1/1/0001 12:00 AM</zusatzinfo1>
+    <zusatzinfo2 />
+  </item>
+  <item>
+    <id>4bb9e005-0ac6-49af-a392-de45029d5e2d</id>
+    <type>OPPORTUNITY</type>
+    <subtype />
+    <mscrmid>16fd15e4-047f-e611-80d1-00155d10673a</mscrmid>
+    <mscrmparentid>6461099a-5929-e611-80cb-00155d10671e</mscrmparentid>
+    <description>Anywhere 24 | Desktop SMS  | TEST ADO Term Set 78 </description>
+    <zusatzinfo1>1/1/0001 12:00 AM</zusatzinfo1>
+    <zusatzinfo2 />
+  </item>
+  <item>
+    <id>576c83e5-a730-4dca-b938-c7056afe909c</id>
+    <type>OPPORTUNITY</type>
+    <subtype />
+    <mscrmid>17fe2231-b580-e611-80d1-00155d10673a</mscrmid>
+    <mscrmparentid>15816ea0-01f8-e511-80c6-00155d10671e</mscrmparentid>
+    <description>A. Datum Corporation (sample) | Software Brokerage  | TEST </description>
+    <zusatzinfo1>1/1/0001 12:00 AM</zusatzinfo1>
+    <zusatzinfo2 />
+  </item>
+  <item>
+    <id>99fc10df-7a5a-4262-a52a-c56bfa3c5311</id>
+    <type>OPPORTUNITY</type>
+    <subtype />
+    <mscrmid>d24a9f6e-9c88-e611-80d1-00155d10673a</mscrmid>
+    <mscrmparentid>17816ea0-01f8-e511-80c6-00155d10671e</mscrmparentid>
+    <description>Coho Winery (sample) | Desktop Fax  | TEST </description>
+    <zusatzinfo1>1/1/0001 12:00 AM</zusatzinfo1>
+    <zusatzinfo2 />
+  </item>
+  <item>
+    <id>ff3def4c-1cfd-40af-ba74-79fa26a49b54</id>
+    <type>OPPORTUNITY</type>
+    <subtype />
+    <mscrmid>efda4920-5289-e611-80d1-00155d10673a</mscrmid>
+    <mscrmparentid>0f816ea0-01f8-e511-80c6-00155d10671e</mscrmparentid>
+    <description>City Power &amp; Light (sample) | Broadcast  | Test Topic </description>
+    <zusatzinfo1>1/1/0001 12:00 AM</zusatzinfo1>
+    <zusatzinfo2 />
+  </item>
+  <item>
+    <id>2dae1f7f-780a-4034-930c-caf68201e612</id>
+    <type>OPPORTUNITY</type>
+    <subtype />
+    <mscrmid>3729862f-d88a-e611-80d1-00155d10673a</mscrmid>
+    <mscrmparentid>15816ea0-01f8-e511-80c6-00155d10671e</mscrmparentid>
+    <description>A. Datum Corporation (sample) | Software Brokerage  | TEST3 </description>
+    <zusatzinfo1>1/1/0001 12:00 AM</zusatzinfo1>
+    <zusatzinfo2 />
+  </item>
+  <item>
+    <id>edb92769-6afe-4cd1-8dc4-1ac6993604be</id>
+    <type>CAMPAIGN</type>
+    <subtype />
+    <mscrmid>19816ea0-01f8-e511-80c6-00155d10671e</mscrmid>
+    <mscrmparentid>00000000-0000-0000-0000-000000000000</mscrmparentid>
+    <description>Product launch campaign (sample)</description>
+    <zusatzinfo1>1/1/0001 12:00 AM</zusatzinfo1>
+    <zusatzinfo2 />
+  </item>
+  <item>
+    <id>044f09fd-3917-47e8-8efb-156f10a7500f</id>
+    <type>CAMPAIGN</type>
+    <subtype />
+    <mscrmid>1b816ea0-01f8-e511-80c6-00155d10671e</mscrmid>
+    <mscrmparentid>00000000-0000-0000-0000-000000000000</mscrmparentid>
+    <description>New customer loyalty program (sample)</description>
+    <zusatzinfo1>1/1/0001 12:00 AM</zusatzinfo1>
+    <zusatzinfo2 />
+  </item>
+  <item>
+    <id>4e4a5179-6e60-4b93-a9d4-c8d1207c10aa</id>
+    <type>CAMPAIGN</type>
+    <subtype />
+    <mscrmid>1d816ea0-01f8-e511-80c6-00155d10671e</mscrmid>
+    <mscrmparentid>00000000-0000-0000-0000-000000000000</mscrmparentid>
+    <description>New ad campaign(sample)</description>
+    <zusatzinfo1>1/1/0001 12:00 AM</zusatzinfo1>
+    <zusatzinfo2 />
+  </item>
+  <item>
+    <id>ad6e0032-2d6a-4fb9-a5f2-fda11585912d</id>
+    <type>CAMPAIGN</type>
+    <subtype />
+    <mscrmid>1f816ea0-01f8-e511-80c6-00155d10671e</mscrmid>
+    <mscrmparentid>00000000-0000-0000-0000-000000000000</mscrmparentid>
+    <description>Event campaign template (sample)</description>
+    <zusatzinfo1>1/1/0001 12:00 AM</zusatzinfo1>
+    <zusatzinfo2 />
+  </item>
+  <item>
+    <id>6c6278b3-df1f-4741-9c15-38e51e1c155b</id>
+    <type>CAMPAIGN</type>
+    <subtype />
+    <mscrmid>21816ea0-01f8-e511-80c6-00155d10671e</mscrmid>
+    <mscrmparentid>00000000-0000-0000-0000-000000000000</mscrmparentid>
+    <description>Direct marketing template (sample)</description>
+    <zusatzinfo1>1/1/0001 12:00 AM</zusatzinfo1>
+    <zusatzinfo2 />
+  </item>
+  <item>
+    <id>c9b7fec6-0da5-459c-9265-7f4153013f96</id>
+    <type>CAMPAIGN</type>
+    <subtype />
+    <mscrmid>23816ea0-01f8-e511-80c6-00155d10671e</mscrmid>
+    <mscrmparentid>00000000-0000-0000-0000-000000000000</mscrmparentid>
+    <description>Co-branding with large retailer (sample)</description>
+    <zusatzinfo1>1/1/0001 12:00 AM</zusatzinfo1>
+    <zusatzinfo2 />
+  </item>
+  <item>
+    <id>824b8333-983f-4985-9747-2c3dda49ea20</id>
+    <type>CAMPAIGN</type>
+    <subtype />
+    <mscrmid>25816ea0-01f8-e511-80c6-00155d10671e</mscrmid>
+    <mscrmparentid>00000000-0000-0000-0000-000000000000</mscrmparentid>
+    <description>Charity event(sample)</description>
+    <zusatzinfo1>1/1/0001 12:00 AM</zusatzinfo1>
+    <zusatzinfo2 />
+  </item>
+  <item>
+    <id>8dffabb5-bc4d-4b3c-b85b-8cd5dd9304ce</id>
+    <type>CAMPAIGN</type>
+    <subtype />
+    <mscrmid>27816ea0-01f8-e511-80c6-00155d10671e</mscrmid>
+    <mscrmparentid>00000000-0000-0000-0000-000000000000</mscrmparentid>
+    <description>Ad campaign template (sample)</description>
+    <zusatzinfo1>1/1/0001 12:00 AM</zusatzinfo1>
+    <zusatzinfo2 />
+  </item>
+  <item>
+    <id>a6a0fc3b-30a8-4e46-85e1-f90088050610</id>
+    <type>CAMPAIGN</type>
+    <subtype />
+    <mscrmid>5b038b61-8021-e611-80cb-00155d10671e</mscrmid>
+    <mscrmparentid>00000000-0000-0000-0000-000000000000</mscrmparentid>
+    <description>Test Kampagne</description>
+    <zusatzinfo1>1/1/0001 12:00 AM</zusatzinfo1>
+    <zusatzinfo2 />
+  </item>
+  <item>
+    <id>d412b3e1-e895-4ef8-95d8-73c454923ddb</id>
+    <type>PICKLIST.BILLING</type>
+    <subtype />
+    <mscrmid>602370000</mscrmid>
+    <mscrmparentid />
+    <description>Time and Material</description>
+  </item>
+  <item>
+    <id>6220e806-29d0-42a4-9bc3-ade2a5eeca54</id>
+    <type>PICKLIST.BILLING</type>
+    <subtype />
+    <mscrmid>602370001</mscrmid>
+    <mscrmparentid />
+    <description>Service Contract</description>
+  </item>
+  <item>
+    <id>50fef41d-f167-4889-9646-38985ad325cb</id>
+    <type>PICKLIST.BILLING</type>
+    <subtype />
+    <mscrmid>602370002</mscrmid>
+    <mscrmparentid />
+    <description>Project Support</description>
+  </item>
+  <item>
+    <id>b55dd22a-07d4-4950-bd87-95ba2c327f3b</id>
+    <type>PICKLIST.BILLING</type>
+    <subtype />
+    <mscrmid>602370003</mscrmid>
+    <mscrmparentid />
+    <description>Product Maintainance</description>
+  </item>
+  <item>
+    <id>0f087b58-e05b-4d8e-bd7f-723e66b515e6</id>
+    <type>PICKLIST.BILLING</type>
+    <subtype />
+    <mscrmid>602370004</mscrmid>
+    <mscrmparentid />
+    <description>Not to be billed</description>
+  </item>
+  <item>
+    <id>4ea9ade0-2990-426c-99bb-f507e3d932df</id>
+    <type>PICKLIST.BILLING</type>
+    <subtype />
+    <mscrmid>602370005</mscrmid>
+    <mscrmparentid />
+    <description>Flat-rate</description>
+  </item>
+  <item>
+    <id>0e6b39a4-9e85-4317-b296-c8050b3cc5e0</id>
+    <type>PICKLIST.BILLING</type>
+    <subtype />
+    <mscrmid>602370006</mscrmid>
+    <mscrmparentid />
+    <description>Internal</description>
+  </item>
+  <item>
+    <id>0d8949ff-0d9c-4992-8b8c-9c6f80268e67</id>
+    <type>PICKLIST.BILLING</type>
+    <subtype />
+    <mscrmid>602370007</mscrmid>
+    <mscrmparentid />
+    <description>Unknown</description>
+  </item>
+  <item>
+    <id>8f425bf8-f677-42aa-befb-81beefe003ef</id>
+    <type>STATUSLIST.STATUSCODE</type>
+    <subtype />
+    <mscrmid>1</mscrmid>
+    <mscrmparentid />
+    <description>active</description>
+  </item>
+  <item>
+    <id>ff03f4a1-d20b-4e35-aa55-9addc704368d</id>
+    <type>STATUSLIST.STATUSCODE</type>
+    <subtype />
+    <mscrmid>2</mscrmid>
+    <mscrmparentid />
+    <description>Inactive</description>
+  </item>
+  <item>
+    <id>719d2708-0e99-4c76-990a-02b1a8b27314</id>
+    <type>USER.LIST</type>
+    <subtype />
+    <mscrmid>08469fa4-7aef-e511-80c6-00155d10671e</mscrmid>
+    <mscrmparentid />
+    <description>Admin Korf</description>
+  </item>
+  <item>
+    <id>48041da4-d206-4548-b970-2cf308354900</id>
+    <type>USER.LIST</type>
+    <subtype />
+    <mscrmid>39399106-7eef-e511-80c6-00155d10671e</mscrmid>
+    <mscrmparentid />
+    <description>DEV Geiger</description>
+  </item>
+  <item>
+    <id>3963d5da-854c-4380-90c3-f7194f584f45</id>
+    <type>USER.LIST</type>
+    <subtype />
+    <mscrmid>61bc1823-7eef-e511-80c6-00155d10671e</mscrmid>
+    <mscrmparentid />
+    <description>Benjamin Storbeck</description>
+  </item>
+  <item>
+    <id>232dd715-a56b-45a8-927c-2ea75a90eb2a</id>
+    <type>USER.LIST</type>
+    <subtype />
+    <mscrmid>6bbc1823-7eef-e511-80c6-00155d10671e</mscrmid>
+    <mscrmparentid />
+    <description>DEV Ullrich</description>
+  </item>
+  <item>
+    <id>73fcce7e-711a-43e5-98d1-93628c2dd5e3</id>
+    <type>USER.LIST</type>
+    <subtype />
+    <mscrmid>2e485229-7eef-e511-80c6-00155d10671e</mscrmid>
+    <mscrmparentid />
+    <description>DEV Grigoryeva</description>
+  </item>
+  <item>
+    <id>5c81a776-c8bd-4a58-819f-3767b265f3a5</id>
+    <type>USER.LIST</type>
+    <subtype />
+    <mscrmid>9e60bc36-7eef-e511-80c6-00155d10671e</mscrmid>
+    <mscrmparentid />
+    <description>DEV Winberger</description>
+  </item>
+  <item>
+    <id>63920008-af60-4af3-bed0-597dbd246d79</id>
+    <type>USER.LIST</type>
+    <subtype />
+    <mscrmid>a860bc36-7eef-e511-80c6-00155d10671e</mscrmid>
+    <mscrmparentid />
+    <description>DEV Strohmayer</description>
+  </item>
+  <item>
+    <id>ef797681-b967-4419-b547-cd0ef88ba41a</id>
+    <type>USER.LIST</type>
+    <subtype />
+    <mscrmid>3fa128c8-3afa-e511-80c6-00155d10671e</mscrmid>
+    <mscrmparentid />
+    <description>A24XRM Administrator</description>
+  </item>
+  <item>
+    <id>4dd979f5-645a-4b99-9445-2faa37d60850</id>
+    <type>USER.LIST</type>
+    <subtype />
+    <mscrmid>1160c1d0-3afa-e511-80c6-00155d10671e</mscrmid>
+    <mscrmparentid />
+    <description>DEV Schwarz</description>
+  </item>
+  <item>
+    <id>de9e5908-e1d5-46ea-bfbb-1f71855c0f28</id>
+    <type>USER.LIST</type>
+    <subtype />
+    <mscrmid>40231252-c71d-e611-80cb-00155d10671e</mscrmid>
+    <mscrmparentid />
+    <description>Dev Ingerl</description>
+  </item>
+  <item>
+    <id>2337cb1f-7cc6-40a4-83f3-6a8b2d4e1455</id>
+    <type>USER.LIST</type>
+    <subtype />
+    <mscrmid>4527c255-b521-e611-80cb-00155d10671e</mscrmid>
+    <mscrmparentid />
+    <description>Com Data</description>
+  </item>
+  <item>
+    <id>33b9a576-04db-4a40-8723-688bc505b890</id>
+    <type>USER.LIST</type>
+    <subtype />
+    <mscrmid>c305c5eb-dd27-e611-80cb-00155d10671e</mscrmid>
+    <mscrmparentid />
+    <description>DEV Weinberger</description>
+  </item>
+  <item>
+    <id>da58ed00-99a8-47c7-9ae0-9c866c35f3bc</id>
+    <type>USER.LIST</type>
+    <subtype />
+    <mscrmid>36e385d8-b828-e611-80cb-00155d10671e</mscrmid>
+    <mscrmparentid />
+    <description>DEV Schauerte</description>
+  </item>
+  <item>
+    <id>244cacfb-f568-4b5b-8762-72fc5f9c4612</id>
+    <type>USER.LIST</type>
+    <subtype />
+    <mscrmid>55eb9ffb-f72e-e611-80cb-00155d10671e</mscrmid>
+    <mscrmparentid />
+    <description>Demo User 01</description>
+  </item>
+  <item>
+    <id>67812bc9-d145-46b2-9807-49f5ac38e81d</id>
+    <type>USER.LIST</type>
+    <subtype />
+    <mscrmid>4efc2704-f82e-e611-80cb-00155d10671e</mscrmid>
+    <mscrmparentid />
+    <description>Demo User 02</description>
+  </item>
+  <item>
+    <id>be23ecc9-7799-4266-b110-c8c47227f13e</id>
+    <type>USER.LIST</type>
+    <subtype />
+    <mscrmid>099a321f-4f38-e611-80cb-00155d10671e</mscrmid>
+    <mscrmparentid />
+    <description>DEV Dombrowskij</description>
+  </item>
+  <item>
+    <id>ed304568-d25b-4e91-9223-26a64a2ebc0c</id>
+    <type>USER.LIST</type>
+    <subtype />
+    <mscrmid>44a766d1-a83c-e611-80cb-00155d10671e</mscrmid>
+    <mscrmparentid />
+    <description>Dev Wolf</description>
+  </item>
+  <item>
+    <id>4a0c4747-5fd0-4fa6-97f1-241cfc197e3f</id>
+    <type>USER.LIST</type>
+    <subtype />
+    <mscrmid>0bdd6d57-013d-e611-80cb-00155d10671e</mscrmid>
+    <mscrmparentid />
+    <description>DEV Koller</description>
+  </item>
+  <item>
+    <id>f9743bdb-b378-4963-abb6-8a636717ffa5</id>
+    <type>USER.LIST</type>
+    <subtype />
+    <mscrmid>4bdf2de7-9f84-e611-80d1-00155d10673a</mscrmid>
+    <mscrmparentid />
+    <description>Andrea Borbelj</description>
+  </item>
+  <item>
+    <id>7a74c757-c846-4e9e-9528-93d252065219</id>
+    <type>USER.LIST</type>
+    <subtype />
+    <mscrmid>57df2de7-9f84-e611-80d1-00155d10673a</mscrmid>
+    <mscrmparentid />
+    <description>Danijel Nadjbabi</description>
+  </item>
+  <item>
+    <id>4431ed20-cd3b-4b7d-a381-a7f26598252e</id>
+    <type>USER.LIST</type>
+    <subtype />
+    <mscrmid>5a3d2649-0b8b-e611-80d1-00155d10673a</mscrmid>
+    <mscrmparentid />
+    <description>DEV Hassani</description>
+  </item>
+  <item>
+    <id>226ca0bc-c766-4a3d-ae6c-b36b1bea6750</id>
+    <type>USER.LIST</type>
+    <subtype />
+    <mscrmid>6bc18972-bd8e-e611-80d1-00155d10673a</mscrmid>
+    <mscrmparentid />
+    <description>Nebojsa Zecevic</description>
+  </item>
+  <item>
+    <id>855070f0-8885-467f-88ce-2cb0a9da175e</id>
+    <type>WORKPACKAGE</type>
+    <subtype>0</subtype>
+    <mscrmid>0df8caae-e18a-e611-80d1-00155d10673a</mscrmid>
+    <mscrmparentid>00000000-0000-0000-0000-000000000000</mscrmparentid>
+    <description>A. Datum Corporation (sample) | Project A. Datum Corporation (sample), Desktop Fax, ORD-01038-M1N6G5  | 1234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890  </description>
+    <zusatzinfo1>1/1/0001 12:00 AM</zusatzinfo1>
+    <zusatzinfo2 />
+  </item>
+  <item>
+    <id>c694204e-7256-4e72-bb27-ec560a7e575a</id>
+    <type>WORKPACKAGE</type>
+    <subtype>0</subtype>
+    <mscrmid>f74630b8-ec99-e611-80d1-00155d10673a</mscrmid>
+    <mscrmparentid>00000000-0000-0000-0000-000000000000</mscrmparentid>
+    <description>Blue Yonder Airlines (sample) | EDI | TETST  </description>
+    <zusatzinfo1>1/1/0001 12:00 AM</zusatzinfo1>
+    <zusatzinfo2 />
+  </item>
+  <item>
+    <id>6687e3a2-0285-4577-9086-32160b12a249</id>
+    <type>OPPORTUNITY</type>
+    <subtype />
+    <mscrmid>5c819314-c78b-e611-80d1-00155d10673a</mscrmid>
+    <mscrmparentid>6461099a-5929-e611-80cb-00155d10671e</mscrmparentid>
+    <description>Anywhere 24 | Software Brokerage  | Renewal </description>
+    <zusatzinfo1>1/1/0001 12:00 AM</zusatzinfo1>
+    <zusatzinfo2 />
+  </item>
+  <item>
+    <id>979aef52-65b2-49b7-95ac-ce0015411cad</id>
+    <type>OPPORTUNITY</type>
+    <subtype />
+    <mscrmid>53bfac88-cb8e-e611-80d1-00155d10673a</mscrmid>
+    <mscrmparentid>17816ea0-01f8-e511-80c6-00155d10671e</mscrmparentid>
+    <description>Coho Winery (sample) | Broadcast  | TEST2 </description>
+    <zusatzinfo1>1/1/0001 12:00 AM</zusatzinfo1>
+    <zusatzinfo2 />
+  </item>
+</CacheEntries>

@@ -1,0 +1,589 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="bCopy.Content" xml:space="preserve">
+    <value>Copy</value>
+  </data>
+  <data name="bCopy.Description" xml:space="preserve">
+    <value>Copy selected time entry</value>
+  </data>
+  <data name="bCopy.Hint" xml:space="preserve">
+    <value>Copy currently selected time entries ...</value>
+  </data>
+  <data name="bDefaultGridView.Content" xml:space="preserve">
+    <value>Default</value>
+  </data>
+  <data name="bDefaultGridView.Description" xml:space="preserve">
+    <value>Sets the selected view as default</value>
+  </data>
+  <data name="bDefaultGridView.Hint" xml:space="preserve">
+    <value>Sets the selected view as default</value>
+  </data>
+  <data name="bDelete.Content" xml:space="preserve">
+    <value>Delete</value>
+  </data>
+  <data name="bDelete.Description" xml:space="preserve">
+    <value>Delete highlighted time entries (Grid and Dynamics CRM)</value>
+  </data>
+  <data name="bDelete.Hint" xml:space="preserve">
+    <value>Remove selected time entries from the Grid and (!) Dynamics CRM ...</value>
+  </data>
+  <data name="bDeleteGridView.Content" xml:space="preserve">
+    <value>Delete</value>
+  </data>
+  <data name="bDeleteGridView.Description" xml:space="preserve">
+    <value>Deletes the currently selected view from the View drop-down list</value>
+  </data>
+  <data name="bDeleteGridView.Hint" xml:space="preserve">
+    <value>Deletes the currently selected view from the View drop-down list</value>
+  </data>
+  <data name="bEdit.Content" xml:space="preserve">
+    <value>Edit</value>
+  </data>
+  <data name="bEdit.Description" xml:space="preserve">
+    <value>Edit selected time entries</value>
+  </data>
+  <data name="bEdit.Hint" xml:space="preserve">
+    <value>Edit selected time entries ...</value>
+  </data>
+  <data name="bExpandAll.Content" xml:space="preserve">
+    <value>Expand groups</value>
+  </data>
+  <data name="bExpandAll.Description" xml:space="preserve">
+    <value>Expand all entries in the Grid  ...</value>
+  </data>
+  <data name="bExpandAll.Hint" xml:space="preserve">
+    <value>Expand all entries in the Grid  ...</value>
+  </data>
+  <data name="bExpandNone.Content" xml:space="preserve">
+    <value>Reduce groups</value>
+  </data>
+  <data name="bExpandNone.Description" xml:space="preserve">
+    <value>Reduce entries in Grid ...</value>
+  </data>
+  <data name="bExpandNone.Hint" xml:space="preserve">
+    <value>Reduce entries in Grid ...</value>
+  </data>
+  <data name="bGoOffline.Content" xml:space="preserve">
+    <value>Switch to offline mode</value>
+  </data>
+  <data name="bGoOffline.Description" xml:space="preserve">
+    <value>Switch to offline mode</value>
+  </data>
+  <data name="bGoOffline.Hint" xml:space="preserve">
+    <value>Switch to offline mode...</value>
+  </data>
+  <data name="bGoOnline.Content" xml:space="preserve">
+    <value>Switch to online mode</value>
+  </data>
+  <data name="bGoOnline.Description" xml:space="preserve">
+    <value>Switch to online mode</value>
+  </data>
+  <data name="bGoOnline.Hint" xml:space="preserve">
+    <value>Switch to online mode...</value>
+  </data>
+  <data name="bHelp.Content" xml:space="preserve">
+    <value>Help for toolbar</value>
+  </data>
+  <data name="bHelp.Description" xml:space="preserve">
+    <value>Displays a description of the toolbar functions ...</value>
+  </data>
+  <data name="bHelp.Hint" xml:space="preserve">
+    <value>Displays a description of the toolbar functions ...</value>
+  </data>
+  <data name="bManageConnections.Content" xml:space="preserve">
+    <value>Manage connections</value>
+  </data>
+  <data name="bManageConnections.Description" xml:space="preserve">
+    <value>Manage Mscrm connections   ...</value>
+  </data>
+  <data name="bManageConnections.Hint" xml:space="preserve">
+    <value>Manage Mscrm connections   ...</value>
+  </data>
+  <data name="bManageLanguage.Content" xml:space="preserve">
+    <value>Select Language</value>
+  </data>
+  <data name="bManageLanguage.Description" xml:space="preserve">
+    <value>Select Language</value>
+  </data>
+  <data name="bManageLanguage.Hint" xml:space="preserve">
+    <value>Select Language</value>
+  </data>
+  <data name="bNew.Content" xml:space="preserve">
+    <value>New</value>
+  </data>
+  <data name="bNew.Description" xml:space="preserve">
+    <value>Create time entry</value>
+  </data>
+  <data name="bNew.Hint" xml:space="preserve">
+    <value>Create new time entry ...</value>
+  </data>
+  <data name="bSaveGridView.Content" xml:space="preserve">
+    <value>Save</value>
+  </data>
+  <data name="bSaveGridView.Description" xml:space="preserve">
+    <value>Save the current Grid view in the Views list</value>
+  </data>
+  <data name="bSaveGridView.Hint" xml:space="preserve">
+    <value>Save the current Grid view in the Views list</value>
+  </data>
+  <data name="bShowFileLog.Content" xml:space="preserve">
+    <value>Display log</value>
+  </data>
+  <data name="bShowFileLog.Description" xml:space="preserve">
+    <value>Displays the FileLog of the current day in NotePad ...</value>
+  </data>
+  <data name="bShowFileLog.Hint" xml:space="preserve">
+    <value>Displays the FileLog of the current day in NotePad ...</value>
+  </data>
+  <data name="bSyncMSCRMActMonth.Content" xml:space="preserve">
+    <value>Transfer current month</value>
+  </data>
+  <data name="bSyncMSCRMActMonth.Description" xml:space="preserve">
+    <value>Transfer time entries for the current month</value>
+  </data>
+  <data name="bSyncMSCRMActMonth.Hint" xml:space="preserve">
+    <value>Transfer time entries for the current month...</value>
+  </data>
+  <data name="bSyncMSCRMEntityRefresh.Content" xml:space="preserve">
+    <value>Resynchronize cache</value>
+  </data>
+  <data name="bSyncMSCRMEntityRefresh.Description" xml:space="preserve">
+    <value>Refresh MSCRM entities cache (AP, ANF, VC)</value>
+  </data>
+  <data name="bSyncMSCRMEntityRefresh.Hint" xml:space="preserve">
+    <value>Refresh MSCRM entities cache (AP, ANF, VC)...</value>
+  </data>
+  <data name="bSyncMSCRMPreMonth.Content" xml:space="preserve">
+    <value>Transfer last month</value>
+  </data>
+  <data name="bSyncMSCRMPreMonth.Description" xml:space="preserve">
+    <value>Transfer time entries of previouse months</value>
+  </data>
+  <data name="bSyncMSCRMPreMonth.Hint" xml:space="preserve">
+    <value>Transfer time entries of previouse months...</value>
+  </data>
+  <data name="btnAddTaetigkeitToFavorites_1" xml:space="preserve">
+    <value>Add activities to favorites</value>
+  </data>
+  <data name="btnAddTaetigkeitToFavorites_2" xml:space="preserve">
+    <value>Add activities to favorites</value>
+  </data>
+  <data name="btnAddToFavorites" xml:space="preserve">
+    <value>Add entity to favorites</value>
+    <comment>btnAddToFavorites_1, 2,  2_1 , 2_2</comment>
+  </data>
+  <data name="btnCancelTimeentry_TextBlock" xml:space="preserve">
+    <value>Cancel</value>
+    <comment>btnCancelTimeentry_1.TextBlock and btnCancelTimeentry_2.TextBlock</comment>
+  </data>
+  <data name="btnDeleteTaetigkeitToFavorites" xml:space="preserve">
+    <value>Remove selected activity from the favorites list</value>
+    <comment>btnDeleteTaetigkeitToFavorites_1, _2</comment>
+  </data>
+  <data name="btnExtendedSearch" xml:space="preserve">
+    <value>Advanced search</value>
+    <comment>btnExtendedSearch_1,_2, 2_1, 2_2</comment>
+  </data>
+  <data name="btnFavorites_1" xml:space="preserve">
+    <value>Favorites selection</value>
+  </data>
+  <data name="btnFavorites_2" xml:space="preserve">
+    <value>Favorites and recent list selection</value>
+  </data>
+  <data name="btnSaveAndCloseTimeentry_TextBlock" xml:space="preserve">
+    <value>Save and close</value>
+    <comment>btnSaveAndCloseTimeentry_1.TextBlock, btnSaveAndCloseTimeentry_2.TextBlock</comment>
+  </data>
+  <data name="btnSaveAndNewTimeentry_TextBlock" xml:space="preserve">
+    <value>Save and new</value>
+    <comment>btnSaveAndNewTimeentry_1.TextBlock, btnSaveAndNewTimeentry_2.TextBlock</comment>
+  </data>
+  <data name="btnSaveTimeentry_TextBlock" xml:space="preserve">
+    <value>Save</value>
+    <comment>btnSaveTimeentry_1.TextBlock,   btnSaveTimeentry_2.TextBlock</comment>
+  </data>
+  <data name="btnShowQuickTimeentryList" xml:space="preserve">
+    <value>Displays a list of recorded times via Start / Stop Timer</value>
+    <comment>btnShowQuickTimeentryList_1, btnShowQuickTimeentryList_2</comment>
+  </data>
+  <data name="btnShowQuickTimeentryList_TextBlock" xml:space="preserve">
+    <value>Display</value>
+    <comment>btnShowQuickTimeentryList_1.TextBlock, btnShowQuickTimeentryList_2.TextBlock</comment>
+  </data>
+  <data name="gc_beginn" xml:space="preserve">
+    <value>START</value>
+  </data>
+  <data name="gc_datum" xml:space="preserve">
+    <value>DATE</value>
+  </data>
+  <data name="gc_dauer" xml:space="preserve">
+    <value>DURATION</value>
+  </data>
+  <data name="gc_ende" xml:space="preserve">
+    <value>END</value>
+  </data>
+  <data name="gc_gesamtdauer" xml:space="preserve">
+    <value>OVERALL DURATION</value>
+  </data>
+  <data name="gc_kw" xml:space="preserve">
+    <value>CW</value>
+  </data>
+  <data name="gc_last_error" xml:space="preserve">
+    <value>SYNC INFORMATION / ERROR</value>
+  </data>
+  <data name="gc_marked.CheckBox" xml:space="preserve">
+    <value>Highlighted</value>
+  </data>
+  <data name="gc_marked.Header" xml:space="preserve">
+    <value>Highlight</value>
+  </data>
+  <data name="gc_mscrmuser" xml:space="preserve">
+    <value>EXECUTED BY</value>
+  </data>
+  <data name="gc_mscrm_link" xml:space="preserve">
+    <value>REFERENCE 1</value>
+  </data>
+  <data name="gc_mscrm_link2" xml:space="preserve">
+    <value>REFERENCE 2</value>
+  </data>
+  <data name="gc_status" xml:space="preserve">
+    <value>SYNC</value>
+  </data>
+  <data name="gc_taetigkeit" xml:space="preserve">
+    <value>ACTIVITY</value>
+  </data>
+  <data name="gc_tekz" xml:space="preserve">
+    <value>ENTITY</value>
+  </data>
+  <data name="gc_zusatzzeit" xml:space="preserve">
+    <value>ADDITIONAL TIME</value>
+  </data>
+  <data name="Label1" xml:space="preserve">
+    <value>Activity:</value>
+  </data>
+  <data name="Label10" xml:space="preserve">
+    <value>Total duration:</value>
+  </data>
+  <data name="Label11" xml:space="preserve">
+    <value>Travel expenses Yes / No:</value>
+  </data>
+  <data name="Label12" xml:space="preserve">
+    <value>Description:</value>
+  </data>
+  <data name="Label13" xml:space="preserve">
+    <value>Note (internal):</value>
+  </data>
+  <data name="Label2" xml:space="preserve">
+    <value>Reference:</value>
+  </data>
+  <data name="Label3" xml:space="preserve">
+    <value>Reference 2:</value>
+  </data>
+  <data name="Label4" xml:space="preserve">
+    <value>Date:</value>
+  </data>
+  <data name="Label5" xml:space="preserve">
+    <value>Executed by:</value>
+  </data>
+  <data name="Label6" xml:space="preserve">
+    <value>Duration:</value>
+  </data>
+  <data name="Label7" xml:space="preserve">
+    <value>Billing Type:</value>
+  </data>
+  <data name="Label8" xml:space="preserve">
+    <value>+ Additional time:</value>
+  </data>
+  <data name="Label9" xml:space="preserve">
+    <value>Status:</value>
+  </data>
+  <data name="RibbonPage1" xml:space="preserve">
+    <value>CRM connection</value>
+  </data>
+  <data name="RibbonPage2" xml:space="preserve">
+    <value>Time entry</value>
+  </data>
+  <data name="RibbonPage3" xml:space="preserve">
+    <value>Groups</value>
+  </data>
+  <data name="RibbonPage4" xml:space="preserve">
+    <value>CRM synchronization</value>
+  </data>
+  <data name="RibbonPage5" xml:space="preserve">
+    <value>View</value>
+  </data>
+  <data name="tabTE_2" xml:space="preserve">
+    <value>Time Entry 2</value>
+  </data>
+  <data name="tabTE_3" xml:space="preserve">
+    <value>Time Entry 3</value>
+  </data>
+  <data name="tabTE_4" xml:space="preserve">
+    <value>Time Entry 4</value>
+  </data>
+  <data name="tabTE_5" xml:space="preserve">
+    <value>Time Entry 5</value>
+  </data>
+  <data name="tabTE_1" xml:space="preserve">
+    <value>Time Entry 1</value>
+    <comment>TimeEntryTabCtrl.Header</comment>
+  </data>
+  <data name="syncedLabel" xml:space="preserve">
+    <value>Time total records</value>
+  </data>
+  <data name="(AP, ANF, VC)" xml:space="preserve">
+    <value>Would you like to delete all the entities (AP, ANF, VC) from the cache before resync ? This will also remove from the cache old / inactive synced before entities of Dynamics CRM...</value>
+  </data>
+  <data name="(AP, ANF, VC)Title" xml:space="preserve">
+    <value>To empty MSCRM entities cache</value>
+  </data>
+  <data name="ActiveTEtoDelete" xml:space="preserve">
+    <value>Are you sure you want to delete the selected time entry from the Grid and Dynamics CRM?(only for already synced time entries) </value>
+  </data>
+  <data name="ActiveTEtoDeleteMany1" xml:space="preserve">
+    <value>Are you sure that you want to delete the</value>
+  </data>
+  <data name="ActiveTEtoDeleteMany2" xml:space="preserve">
+    <value>highlighted time entries from the Grid and Dynamics CRM (only for already synced time entries) ?</value>
+  </data>
+  <data name="ActiveTEtoDeleteTitle" xml:space="preserve">
+    <value>Remove highlighted time entry</value>
+  </data>
+  <data name="ActivityDropDown" xml:space="preserve">
+    <value>Please enter an activity, which is not included in the list of favorites (drop down) ! </value>
+  </data>
+  <data name="ActivityFavorite1" xml:space="preserve">
+    <value>The activity</value>
+  </data>
+  <data name="ActivityFavorite2" xml:space="preserve">
+    <value>has been added to your list of favourite activities.</value>
+  </data>
+  <data name="ActivityInList" xml:space="preserve">
+    <value>The selected activity is already in the list of favorites!</value>
+  </data>
+  <data name="ActivityNote" xml:space="preserve">
+    <value>Blank entry in the 'Activity' is not allowed. Please correct your entry!</value>
+  </data>
+  <data name="AlreadyRunning" xml:space="preserve">
+    <value>Program has already been started!</value>
+  </data>
+  <data name="BezugNote" xml:space="preserve">
+    <value>Please select a valid Dynamics CRM reference that has to be assigned to this time entry</value>
+  </data>
+  <data name="BillingType" xml:space="preserve">
+    <value>Please select the billing type that has to be assigned to this time entry </value>
+  </data>
+  <data name="CancelTimeentry" xml:space="preserve">
+    <value>Are you sure you want to cancel the processing of the opened time entry?</value>
+  </data>
+  <data name="CancelTimeentryTitle" xml:space="preserve">
+    <value>Cancel processing</value>
+  </data>
+  <data name="DynamicsCRM" xml:space="preserve">
+    <value>Please select a valid Dynamics CRM reference that has to be assigned to this time entry </value>
+  </data>
+  <data name="ErrInfoStr" xml:space="preserve">
+    <value>Configuration error, the following key entries are missing from the section &lt;appSettings&gt;:</value>
+  </data>
+  <data name="ErrInfoStrTitle" xml:space="preserve">
+    <value>Critical Error</value>
+  </data>
+  <data name="Error" xml:space="preserve">
+    <value>Error</value>
+  </data>
+  <data name="ExistingActivity" xml:space="preserve">
+    <value>Please enter an activity, which is in your list of favorites(drop down) or select an existing activity!</value>
+  </data>
+  <data name="FavoritesList" xml:space="preserve">
+    <value>The selected reference is already in the list of favorites!</value>
+  </data>
+  <data name="ImportantNote" xml:space="preserve">
+    <value>Important note</value>
+  </data>
+  <data name="InternError" xml:space="preserve">
+    <value>Internal error: The selected activity can not be found in your list of favorites!</value>
+  </data>
+  <data name="max5" xml:space="preserve">
+    <value>Max. 5 time entries can be simultaneously activated! Please close down an entry if you want to activate a new or existing time entry.</value>
+  </data>
+  <data name="NOK.png" xml:space="preserve">
+    <value>Reference not valid!</value>
+  </data>
+  <data name="OK.png" xml:space="preserve">
+    <value>Reference is valid</value>
+  </data>
+  <data name="ValidReferences" xml:space="preserve">
+    <value>Reference could not be added. Please select a valid reference!</value>
+  </data>
+  <data name="ActiveTEtoDeleteManyTitle" xml:space="preserve">
+    <value>Remove highlighted time entries</value>
+  </data>
+  <data name="TimeItems" xml:space="preserve">
+    <value>Time items</value>
+  </data>
+  <data name="DeletedDynamicsCRM" xml:space="preserve">
+    <value>There was deleted a time entry from Dynamics CRM!</value>
+  </data>
+  <data name="DeletedFromGrid1" xml:space="preserve">
+    <value>There were</value>
+  </data>
+  <data name="DeletedFromGrid2" xml:space="preserve">
+    <value>time entries deleted from the grid!</value>
+  </data>
+  <data name="DeletedTimeEntry" xml:space="preserve">
+    <value>There was deleted a time entry from the grid!</value>
+  </data>
+  <data name="DynamicsCRMdeleted1" xml:space="preserve">
+    <value>There were</value>
+  </data>
+  <data name="DynamicsCRMdeleted2" xml:space="preserve">
+    <value>Time entries Dynamics CRM deleted!</value>
+  </data>
+  <data name="EntriesOpened" xml:space="preserve">
+    <value>Unfortunately already 5 time entries opened for editing. No more time entries are open.</value>
+  </data>
+  <data name="NoConnection" xml:space="preserve">
+    <value>No connection available.</value>
+  </data>
+  <data name="RemovedActivit2" xml:space="preserve">
+    <value>has been removed from your activities Picks list.</value>
+  </data>
+  <data name="RemovedActivity1" xml:space="preserve">
+    <value>The activity</value>
+  </data>
+  <data name="SelectedReference" xml:space="preserve">
+    <value>The selected reference is added to your favorites list.</value>
+  </data>
+  <data name="SuccessfullyTransferredCRM" xml:space="preserve">
+    <value>Time items were successfully transferred from the Dynamics CRM</value>
+  </data>
+  <data name="TemporaryContract" xml:space="preserve">
+    <value>You have min. marked a temporary contract for deletion, which is being actively edited. Please include the time entry in order to continue the deletion can!</value>
+  </data>
+  <data name="TimeEntriesOpen1" xml:space="preserve">
+    <value>There are</value>
+  </data>
+  <data name="TimeEntriesOpen2" xml:space="preserve">
+    <value>Time Entries open for editing.</value>
+  </data>
+  <data name="TimeEntryForDeletion" xml:space="preserve">
+    <value>You have not selected any time entry for deletion. Please select at least one time entry to continue the deletion can!</value>
+  </data>
+</root>

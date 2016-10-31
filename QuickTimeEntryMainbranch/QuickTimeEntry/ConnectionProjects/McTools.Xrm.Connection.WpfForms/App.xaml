@@ -1,0 +1,8 @@
+﻿<Application x:Class="McTools.Xrm.Connection.WpfForms.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             StartupUri="ConnectionForm.xaml">
+    <Application.Resources>
+         
+    </Application.Resources>
+</Application>
